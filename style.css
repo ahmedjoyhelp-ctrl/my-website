@@ -28,7 +28,7 @@ body{
 
 .navbar{
   width:100%;
-  background:#003b46;
+  background:#2aa8be;
   padding:15px 25px;
 }
 
@@ -125,7 +125,7 @@ body{
 
 /* Title */
 .menu-title {
-  background: #003b46;
+  background: #2aa8be;
   color: white;
   padding: 12px 0px;
   font-weight: bold;
@@ -140,7 +140,7 @@ body{
   position: absolute;
   top: 100%;   /* directly under title */
   width: 150%;
-  background: #2d6f78f6;
+  background: #2aa8bef6;
 
   opacity: 1;
   visibility: hidden;
@@ -161,7 +161,7 @@ body{
   font-weight:600;
   padding: 12px 25px;
   color: #e6f4f6;
-  border-bottom: 1px solid rgba(0, 204, 255, 0.1);
+  border-bottom: 1px solid rgba(10, 86, 105, 0.1);
   display: flex;
   justify-content: space-between;
   align-items: center;
