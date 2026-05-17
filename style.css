@@ -15,6 +15,27 @@ img {
   pointer-events: none;
 }
 
+:root{
+  --primary-font: 'Livvic', sans-serif;
+  --secondary-font: 'Inter', sans-serif;
+}
+
+h1,
+h2,
+h3,
+.nav-menu,
+.btn{
+  font-family: var(--primary-font);
+}
+
+body,
+p,
+span,
+li,
+a{
+  font-family: var(--secondary-font);
+}
+
 body{
   background:#f5f5f5;
   overflow-x:hidden;
