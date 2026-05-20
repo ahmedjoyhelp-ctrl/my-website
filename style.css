@@ -372,13 +372,65 @@ a {
   gap:50px;
 }
 
+/* =========================
+   HERO ANIMATION
+========================= */
 
-
-/* LEFT CONTENT */
-
+/* LEFT SIDE START */
 .left{
   max-width:520px;
+
+  opacity:0;
+  transform:translateX(-520px);
+
+  animation:leftSlide 1s ease forwards;
 }
+
+/* RIGHT SIDE START */
+.right{
+  max-width:520px;
+
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:40px;
+
+  opacity:0;
+  transform:translateX(520px);
+
+  animation:rightSlide 1s ease forwards;
+}
+
+/* LEFT ANIMATION */
+@keyframes leftSlide{
+
+  from{
+    opacity:0;
+    transform:translateX(-520px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+
+}
+
+/* RIGHT ANIMATION */
+@keyframes rightSlide{
+
+  from{
+    opacity:0;
+    transform:translateX(520px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+
+}
+
+
 
 .left h1{
   
@@ -428,18 +480,6 @@ a {
   color:#2b2fae;
 }
 
-
-
-/* RIGHT CONTENT */
-
-.right{
-  max-width:520px;
-
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-
-  gap:20px;
-}
 
 .shape img{
   width:100%;
