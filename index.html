@@ -1,322 +1,490 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
 
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Clipping Path Service Provider | Image & Photo Editing</title>
+    <title>Clipping Path Service Provider | Image & Photo Editing</title>
 
-  <!-- FONT AWESOME -->
-  <link rel="stylesheet"
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
+    <!-- FONT AWESOME -->
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"/>
 
-  <!-- SVG Favicon -->
-  <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <!-- SVG Favicon -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="style.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="style.css">
 
-  
-  <!-- link for Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  
-  <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-  
-</head>
-
-
-<body>
-
-<!-- =========================
-     HEADER
-========================= -->
-<header>
-
-  <!-- =========================
-       NAVBAR
-  ========================= -->
-  <nav class="navbar">
-
-    <div class="nav-container">
-
-      <!-- LOGO -->
-      <a href="#" class="logo">
-        <img src="logo_house.svg" alt="Logo">
-      </a>
+    
+    <!-- link for Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+  </head>
 
 
-      <!-- MOBILE MENU BUTTON -->
-      <input type="checkbox" id="menu-toggle">
+  <body>
 
-      <label for="menu-toggle" class="hamburger">
-        <i class="fa-solid fa-bars"></i>
-      </label>
+    <!-- =========================
+        HEADER
+    ========================= -->
+    <header>
+
+      <!-- =========================
+          NAVBAR
+      ========================= -->
+      <nav class="navbar">
+
+        <div class="nav-container">
+
+          <!-- LOGO -->
+          <a href="#" class="logo">
+            <img src="logo_house.svg" alt="Logo">
+          </a>
 
 
-      <!-- RIGHT SIDE -->
-      <div class="nav-right">
+          <!-- MOBILE MENU BUTTON -->
+          <input type="checkbox" id="menu-toggle">
 
-        <!-- MENU -->
-        <ul class="nav-menu">
+          <label for="menu-toggle" class="hamburger">
+            <i class="fa-solid fa-bars"></i>
+          </label>
 
-          <li class="nav-text-hover"><a href="#">HOME</a></li>
 
-          <li>
-            <a href="#">
-              <div class="menu">
-                <div class="menu-title nav-text-hover">
-                  <a href="#">PHOTO EDITING<span><i class="fa-solid fa-angle-down"></i></span>
-                  </a>
-                </div>
+          <!-- RIGHT SIDE -->
+          <div class="nav-right">
 
-                <div class="submenu">
-                  <div class="item-for-sub nav-text-hover"><a href="#">Ghost Mannequin</a></div>
-                  <div class="item-for-sub nav-text-hover"><a href="#">ECommerce Edit <span>></span></a></div>
-                  <div class="item-for-sub nav-text-hover"><a href="#">Fashion Retouch <span>></span></a></div>
-                  <div class="item-for-sub nav-text-hover"><a href="#">Furniture Edit</a></div>
-                  <div class="item-for-sub nav-text-hover"><a href="#">Shadow Making <span>></span></a></div>
-                  <div class="item-for-sub nav-text-hover"><a href="#">Real Estate Retouch</a></div>
-                  <div class="item-for-sub nav-text-hover"><a href="#">Car Photo Edit</a></div>
-                </div>
-              </div>
+            <!-- MENU -->
+            <ul class="nav-menu">
+
+              <li class="nav-text-hover"><a href="#">HOME</a></li>
+
+              <li>
+                <a href="#">
+                  <div class="menu">
+                    <div class="menu-title nav-text-hover">
+                      <a href="#">PHOTO EDITING<span><i class="fa-solid fa-angle-down"></i></span>
+                      </a>
+                    </div>
+
+                    <div class="submenu">
+                      <div class="item-for-sub nav-text-hover"><a href="#">Ghost Mannequin</a></div>
+                      <div class="item-for-sub nav-text-hover"><a href="#">ECommerce Edit <span>></span></a></div>
+                      <div class="item-for-sub nav-text-hover"><a href="#">Fashion Retouch <span>></span></a></div>
+                      <div class="item-for-sub nav-text-hover"><a href="#">Furniture Edit</a></div>
+                      <div class="item-for-sub nav-text-hover"><a href="#">Shadow Making <span>></span></a></div>
+                      <div class="item-for-sub nav-text-hover"><a href="#">Real Estate Retouch</a></div>
+                      <div class="item-for-sub nav-text-hover"><a href="#">Car Photo Edit</a></div>
+                    </div>
+                  </div>
+                </a>
+              </li>
+
+              <li class="nav-text-hover"><a href="#">CLIPPING PATH</a></li>
+
+              <li class="nav-text-hover"><a href="#">JEWELRY RETOUCH</a></li>
+
+              <li class="nav-text-hover"><a href="#">IMAGE MASKING</a></li>
+
+            </ul>
+
+
+            <!-- BUTTON -->
+            <a href="#" class="trial-btn">
+              FREE TRIAL
             </a>
-          </li>
 
-          <li class="nav-text-hover"><a href="#">CLIPPING PATH</a></li>
-
-          <li class="nav-text-hover"><a href="#">JEWELRY RETOUCH</a></li>
-
-          <li class="nav-text-hover"><a href="#">IMAGE MASKING</a></li>
-
-        </ul>
-
-
-        <!-- BUTTON -->
-        <a href="#" class="trial-btn">
-          FREE TRIAL
-        </a>
-
-      </div>
-
-    </div>
-
-  </nav>
-
-
-
-  <!-- =========================
-       TOP BAR
-  ========================= -->
-  <nav class="secondary-nav">
-
-    <div class="top-bar">
-
-      <div class="item">
-        <span><i class="fa-solid fa-dollar-sign"></i></span>
-        <p>From $0.25 per image</p>
-      </div>
-
-      <div class="item">
-        <span>❤</span>
-        <p>24/7 support</p>
-      </div>
-
-      <div class="item">
-        <span>⏱</span>
-        <p>Turnaround from 6 hours</p>
-      </div>
-
-      <div class="item">
-        <p>Excellent 4.8 out of 5 ⭐ Trustpilot</p>
-      </div>
-
-      <div class="item">
-        <span class="verify-button"></span>
-        <p>Quality guaranteed</p>
-      </div>
-
-    </div>
-
-  </nav>
-
-</header>
-
-
-
-<!-- =========================
-     HERO SECTION
-========================= -->
-<main>
-
-  <section class="hero">
-
-    <div class="container">
-
-      <!-- LEFT -->
-      <div class="left">
-
-        <h1>
-          Get perfectly edited images in as little as 6 hours
-        </h1>
-
-        <p>
-          From a simple white background to the most complex clipping paths.
-          <strong>
-            Get pixel perfect professional photo editing services
-          </strong>,
-          whenever you need them.
-        </p>
-
-        <div class="buttons">
-
-          <a href="#" class="btn primary">
-            Get my image edits →
-          </a>
-
-          <a href="#" class="btn secondary">
-            Get 2 free edits →
-          </a>
+          </div>
 
         </div>
 
-      </div>
+      </nav>
 
 
-      <!-- RIGHT -->
-      <div class="right">
 
-        <div class="shape">
-          <img src="images/Air_Pods.svg" alt="">
+      <!-- =========================
+          TOP BAR
+      ========================= -->
+      <nav class="secondary-nav">
+
+        <div class="top-bar">
+
+          <div class="item">
+            <span><i class="fa-solid fa-dollar-sign"></i></span>
+            <p>From $0.25 per image</p>
+          </div>
+
+          <div class="item">
+            <span>❤</span>
+            <p>24/7 support</p>
+          </div>
+
+          <div class="item">
+            <span>⏱</span>
+            <p>Turnaround from 6 hours</p>
+          </div>
+
+          <div class="item">
+            <p>Excellent 4.8 out of 5 ⭐ Trustpilot</p>
+          </div>
+
+          <div class="item">
+            <span class="verify-button"></span>
+            <p>Quality guaranteed</p>
+          </div>
+
         </div>
 
-        <div class="shape">
-          <img src="images/Shoes.svg" alt="">
+      </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+        HERO SECTION
+    ========================= -->
+    <main>
+
+      <section class="hero">
+
+        <div class="container">
+
+          <!-- LEFT -->
+          <div class="left">
+
+            <h1>
+              Get perfectly edited images in as little as 6 hours
+            </h1>
+
+            <p>
+              From a simple white background to the most complex clipping paths.
+              <strong>
+                Get pixel perfect professional photo editing services
+              </strong>,
+              whenever you need them.
+            </p>
+
+            <div class="buttons">
+
+              <a href="#" class="btn primary">
+                Get my image edits →
+              </a>
+
+              <a href="#" class="btn secondary">
+                Get 2 free edits →
+              </a>
+
+            </div>
+
+          </div>
+
+
+          <!-- RIGHT -->
+          <div class="right">
+
+            <div class="shape">
+              <img src="images/Air_Pods.svg" alt="">
+            </div>
+
+            <div class="shape">
+              <img src="images/Shoes.svg" alt="">
+            </div>
+
+            <div class="shape">
+              <img src="images/Model_Hair_Masking.svg" alt="">
+            </div>
+
+            <div class="shape">
+              <img src="images/Chair.svg" alt="">
+            </div>
+
+          </div>
+
         </div>
 
-        <div class="shape">
-          <img src="images/Model_Hair_Masking.svg" alt="">
+      </section>
+      <!-- =========================
+        section 2
+      ========================= -->
+      <section class="hero-section">
+        <div class="hero-content">
+            <h2>Best Clipping Path Company</h2>
+
+            <p>
+                Need perfect photos for your business or personal use? 
+                <strong>Logo House</strong> is here to help! We offer easy and affordable 
+                photo editing services to make your images look amazing.
+            </p>
+
+            <p>
+                Our services include Clipping Path, Clipping Mask in Photoshop, 
+                Product Photo Editing, Portrait Retouching, Image Masking, 
+                Color Correction, Jewelry Retouching, Logo Design, Raster to Vector, 
+                and Photo Manipulation.
+            </p>
+
+            <p>
+                Outsource your projects to our professional Photoshop and Illustrator designers 
+                and get high-quality results within 6 to 24 hours. Our services are perfect for 
+                photographers, eCommerce stores, and businesses that need professional visuals.
+            </p>
+
+            <a href="#" class="hero-btn">Get Started</a>
+        </div>
+      </section>
+
+      <!-- =========================
+        section 3
+      ========================= -->
+      <section class="hero-section-3">
+        <div class="child-hero-content-3-1">
+          <h2>Clipping Path Services</h2>
+          <div class="child-hero-content-3-2">
+            <div class="card">
+              <img src="images\original\clothing-photo-editing-service.webp" alt="">
+              <h3>clipping path service</h3>
+              <p>
+                We are the most reliable <strong>Clipping Path Service</strong> provider in the industry. Our skilled team of graphic designers work hard to provide you with top-quality clipping path services. We pay attention to every detail. We offer great solutions for photographers, graphic designers and ecommerce owners.We can finish your orders quickly and keep high quality. This way, you can deliver important projects to your clients on time. We have different pricing options. This helps us meet your needs and give you the best value for your money.As for your images you have no need to worry as we have measures to keep your privacy and sensitive information safe.
+              </p>
+            </div>
+            <div class="card">
+              <img src="images\original\furniture-photo-editing-service.webp" alt="">
+              <h3>Complex Clipping Path</h3>
+              <p>
+                High-quality image editing relies on complex clipping path services to achieve precise, professional results. Complex clipping paths are different from basic ones. They serve more detailed tasks. This includes isolating hair, fur, or transparent objects.Using complex clipping path services can really improve the look of your images. If you have an online store, you want to display your products clearly. If you are a photographer, you need good edits. These services can help you with both. They pay close attention to detail, making your images stand out.It makes your visuals look better.
+              </p>
+            </div>
+            <div class="card">
+              <img src="images\original\Cutout-On-White.webp" alt="">
+              <h3>e-commerce Photo Editing</h3>
+              <p>
+                We are ready to change the product photos to fit your needs. We offer many services. These include cutout on white, background removal, color correction, image resizing, and creating artificial shadows. We can add different effects to the images and fix any flaws. This will improve the look and appeal of your products to potential buyers.Our service includes: - Photoshop Clipping Path - Background Removal - Photo Retouching - Color Correction - Image Resize and Crop - Shadows and Reflections - Image Enhancement - Customized EditsFor questions, doubts, and ideas, we prefer phone or email.
+              </p>
+            </div>
+            <div class="card">
+              <img src="images\original\Vehicles-Clipping-Path-shadowing-300x169.webp" alt="">
+              <h3>Image Shadowing</h3>
+              <p>
+                We provide professional shadow making in Photoshop. This helps create beautiful and realistic shadows for your product photos. You know how important it is to focus on the visual presentation of your products. If you need natural shadows, drop shadows, reflection shadows, or a mix of these, we can help you.Improve Your Product Photographs Today! To attract customers and encourage them to buy your product, our Photoshop shadow service can help. We can help you create shadows. This service is for E-commerce retailers, professional photographers, and graphic design agencies.There are three types of shadow making services. Original shadowing, natural shadowing, and drop shadow making service. We can make it upon client demands. Let me know which type you're referring to or if it's something different! If you have any sample to follow it will be helpful for our shadow making experts.
+              </p>
+            </div>
+            <div class="card">
+              <img src="images\original\Jewelry-Photo-Enhance-300x169.webp" alt="">
+              <h3>Jewelry Retouching</h3>
+              <p>
+                Are you a jewelry business owner, designer, or photographer looking for the best way to showcase your beautiful pieces? Our Jewelry Photo Retouching Service stands out as one of the premier options available in the market today. We specialize in enhancing the visual appeal of jewelry images, ensuring that every piece shines with its true brilliance.The jewelry retouching process is careful and detailed. It needs a sharp eye for detail and a good understanding of the materials. We focus on cleaning, scratch removal, and polishing.We remove bad reflections and edit the digital images. We correct contrast and brightness as need. We eliminate backgrounds from the jewelry. Finally, we create shadows and add finishing touches.Choose us and make your images sparkling with the help of our Jewelry Photo Retouching Service. Feel free to contact us to know more details and get the amazing result you’ve been looking for!
+              </p>
+            </div>
+            <div class="card">
+              <img src="images\original\Color-Correction-Service-300x180.webp" alt="">
+              <h3>Color Correction</h3>
+              <p>
+                Welcome to our Photoshop Color Correction service. We are here to turn your photos into beautiful works of art. Color correction is not just about making your images look good; it's about conveying the right mood and emotion. The colors in a photograph can significantly influence how viewers perceive the subject matter. We understand the nuances of color theory and the impact it has on visual storytelling. We want to ensure that the final product not only meets your expectations but exceeds them. We stay updated with industry trends to provide you with the best service possible. We understand that every project is unique. That's why we take the time to listen to your specific requirements and tailor our services to meet your vision. Get a quote today from Clipping Path AI to learn about how we can help with your color correction today. The minimum price that we offer for color correction service is $0.39 per Image.
+              </p>
+            </div>
+            <div class="card">
+              <img src="images\original\neck-joint-300x237.webp" alt="">
+              <h3>Neck Join</h3>
+              <p>
+                Are you currently involved in the clothing manufacturing or retail industry? Creating high-quality, attention-grabbing products is crucial for success in today's competitive market.Our high-quality neck join services enhance your clothing line's visual appeal and craftsmanship for a lasting customer impression. Allow us to present our Guaranteed Ghost Mannequin Service tailored to meet all your clothing photography needs. Our Ghost Mannequin Service encompasses various types of apparel, such as:- Tops, Shirts, and Blouses- Trousers, Jeans, and Pants- Dresses, Skirts, and Gowns- Coats, Jackets, and Outerwear- Swimwear and Shorts- Lingerie and Undergarments- Hosiery and Socks- Sportswear and ActivewearGet in touch with us today to discuss your needs, and let us elevate your clothing line in ways you never imagined!
+              </p>
+            </div>
+            <div class="card">
+              <img src="images\original\hair-masking-service-300x169.webp" alt="">
+              <h3>Image Masking</h3>
+              <p>
+                Image masking is the art of removing backgrounds from an image. Clipping mask on Photoshop creates a clean look that appears natural and untouched.Whether you have straight European hair or curly hair, our specialists use the latest technology. We mask individual hair strands and other details. This makes our cutouts blend perfectly into any background.The Image Masking service is perfect for anyone who needs photo editing. This includes selling products online or for publication.We provide high-quality work. We also understand that you have limited time and money. To ensure complete customer satisfaction, We offer free alterations until your project reaches perfection.Do you want to increase product image appeal and make the pictures look more attractive to a potential buyer? Please try us for free of cost.
+              </p>
+            </div>
+            <div class="card">
+              <img src="images\original\Headshot-retouch-300x180.webp" alt="">
+              <h3>Portrait Retouching</h3>
+              <p>
+                We transform your pictures into unique pieces of art! We are a team of professional Graphic designers work on digital face adjustments for portraits. We also enhance eyes and teeth. Skin retouching, body shaping, fabric retouching, hair retouching, background adjustments, color enhancement are the major parts of fashion retouching services.Hair cloning is another important task. They clean backgrounds and apply creative color grading. Finally, they add any necessary facial makeup.No matter your purpose, whether for business, memories, or social media, we dedicate ourselves to improving your photos. We can change boring images into artistic masterpieces that you would want to display at home.To get a quote, check the price list. You can also contact us now. Join our clients and enjoy the Portrait Retouching service!
+              </p>
+            </div>
+          </div>
+
+          <!-- ORDER NOW AND FREE TRIAL BUTTONS -->
+          <div class="buttons ordernowfreetrial">
+
+              <a href="#" class="btn primary order-now-btn">
+                Order Now
+              </a>
+
+              <a href="#" class="ordernowbtn-contentnone">
+                
+              </a>
+
+              <a href="#" class="btn secondary free-trial-btn">
+                Free Trial
+              </a>
+
+            </div>
         </div>
 
-        <div class="shape">
-          <img src="images/Chair.svg" alt="">
+      </section>
+
+      <!-- =========================
+        SECTION 4 - FAQ
+      ========================= -->
+      <section class="faq-section">
+
+        <div class="faq-container">
+
+          <!-- TITLE -->
+          <h2>Frequently Asked Questions</h2>
+
+          <!-- FAQ GRID -->
+          <div class="faq-grid">
+
+            <!-- LEFT COLUMN -->
+            <div class="faq-column">
+
+              <div class="faq-item">
+                <h3>What is clipping path service?</h3>
+
+                <p>
+                  Clipping path service is an editing technique used to separate an object from a picture. It helps improve the image by removing unwanted items and backgrounds. It’s also used to add graphics, adjust colors, and create transparent backgrounds. Clipping path is commonly used in photo retouching, color correction, background removal, and shadow creation.
+                </p>
+              </div>
+
+              <div class="faq-item">
+                <h3>What is clipping path service?</h3>
+
+                <p>
+                  Clipping path service is an editing technique used to separate an object from a picture. It helps improve the image by removing unwanted items and backgrounds. It’s also used to add graphics, adjust colors, and create transparent backgrounds. Clipping path is commonly used in photo retouching, color correction, background removal, and shadow creation.
+                </p>
+              </div>
+
+            </div>
+
+            <!-- RIGHT COLUMN -->
+            <div class="faq-column">
+
+              <div class="faq-item">
+                <h3>Which is the best tool to use for clipping path work?</h3>
+
+                <p>
+                  Photoshop has many tools, such as Quick Mask, Magic Wand, Magnetic Lasso, and Pen Tools. The tool you choose depends on your skill level. The Pen Tool is most commonly used for Clipping Path services. It’s especially useful for removing backgrounds, as it creates a path around the image.
+                </p>
+              </div>
+
+                <div class="faq-item">
+                  <h3>What is a Photoshop clipping mask?</h3>
+
+                  <p>
+                    Clipping masks in Photoshop are a great way to control what parts of a layer are visible. While they might seem similar to layer masks, they work differently. A layer mask uses black and white to hide or show parts of the layer, while a clipping mask uses the content and transparency of one layer to control the visibility of another.
+                  </p>
+                </div>
+
+            </div>
+
+          </div>
+
         </div>
 
-      </div>
+      </section>
 
-    </div>
+      <!-- =========================
+        SECTION 5 - WHY CHOOSE US
+      ========================= -->
+      <section class="choose-section">
 
-  </section>
-  <!-- =========================
-    section 2
-  ========================= -->
-  <section class="hero-section">
-    <div class="hero-content">
-        <h2>Best Clipping Path Company</h2>
+        <div class="choose-container">
 
-        <p>
-            Need perfect photos for your business or personal use? 
-            <strong>Logo House</strong> is here to help! We offer easy and affordable 
-            photo editing services to make your images look amazing.
-        </p>
+          <!-- TITLE -->
+          <h2>Why Choose us</h2>
 
-        <p>
-            Our services include Clipping Path, Clipping Mask in Photoshop, 
-            Product Photo Editing, Portrait Retouching, Image Masking, 
-            Color Correction, Jewelry Retouching, Logo Design, Raster to Vector, 
-            and Photo Manipulation.
-        </p>
+          <!-- GRID -->
+          <div class="choose-grid">
 
-        <p>
-            Outsource your projects to our professional Photoshop and Illustrator designers 
-            and get high-quality results within 6 to 24 hours. Our services are perfect for 
-            photographers, eCommerce stores, and businesses that need professional visuals.
-        </p>
+            <!-- ITEM 1 -->
+            <div class="choose-item">
+              <h3>Transparent Pricing</h3>
 
-        <a href="#" class="hero-btn">Get Started</a>
-    </div>
-  </section>
+              <p>
+                Pricing: Our pricing is clear. This makes it easy for customers to see costs. Customers with a framework contract pay a set fee per picture.
+              </p>
+            </div>
 
-  <!-- =========================
-    section 3
-  ========================= -->
-  <section class="hero-section-3">
-    <div class="child-hero-content-3-1">
-      <h2>Clipping Path Services</h2>
-      <div class="child-hero-content-3-2">
-        <div class="card">
-          <img src="images\original\clothing-photo-editing-service.webp" alt="">
-          <h3>clipping path service</h3>
-          <p>
-            We are the most reliable <strong>Clipping Path Service</strong> provider in the industry. Our skilled team of graphic designers work hard to provide you with top-quality clipping path services. We pay attention to every detail. We offer great solutions for photographers, graphic designers and ecommerce owners.We can finish your orders quickly and keep high quality. This way, you can deliver important projects to your clients on time. We have different pricing options. This helps us meet your needs and give you the best value for your money.As for your images you have no need to worry as we have measures to keep your privacy and sensitive information safe.
-          </p>
+            <!-- ITEM 2 -->
+            <div class="choose-item">
+              <h3>Reasonable Price</h3>
+
+              <p>
+                We can offer low price for our services. This helps clients afford what we provide. You can pay later after we complete the work properly.
+              </p>
+            </div>
+
+            <!-- ITEM 3 -->
+            <div class="choose-item">
+              <h3>Manually Hand-Drawn</h3>
+
+              <p>
+                Our skilled designers carefully retouch images using pen tools and tablets. They aim for perfect and natural-looking edges without AI tools.
+              </p>
+            </div>
+
+            <!-- ITEM 4 -->
+            <div class="choose-item">
+              <h3>24 hours customer support</h3>
+
+              <p>
+                Our customer support team is around you for 24 hours. You can ask any question related to the job any time of the day.
+              </p>
+            </div>
+
+            <!-- ITEM 5 -->
+            <div class="choose-item">
+              <h3>Monthly Invoice Schedule</h3>
+
+              <p>
+                We accept order to order payment, weekly payment and monthly payment. You can pay us through any payment methods.
+              </p>
+            </div>
+
+            <!-- ITEM 6 -->
+            <div class="choose-item">
+              <h3>Fast Turnaround Time</h3>
+
+              <p>
+                Our clipping path company ensures that we complete all our clients’ work on time. If we cannot meet the deadline, we offer rush services for an extra fee.
+              </p>
+            </div>
+
+            <!-- ITEM 7 -->
+            <div class="choose-item">
+              <h3>Dedicated QC team</h3>
+
+              <p>
+                For each service, we have a separate QC team of editing experts. They divide the work for accurate photo editing and clipping path services.
+              </p>
+            </div>
+
+            <!-- ITEM 8 -->
+            <div class="choose-item">
+              <h3>Data Privacy</h3>
+
+              <p>
+                We Promise to keep your Images safe and private. We limit how to use profile images in our work. This helps maintain your trust in our company’s promise to keep things confidential.
+              </p>
+            </div>
+
+          </div>
+
         </div>
-        <div class="card">
-          <img src="images\original\furniture-photo-editing-service.webp" alt="">
-          <h3>Complex Clipping Path</h3>
-          <p>
-            High-quality image editing relies on complex clipping path services to achieve precise, professional results. Complex clipping paths are different from basic ones. They serve more detailed tasks. This includes isolating hair, fur, or transparent objects.Using complex clipping path services can really improve the look of your images. If you have an online store, you want to display your products clearly. If you are a photographer, you need good edits. These services can help you with both. They pay close attention to detail, making your images stand out.It makes your visuals look better.
-          </p>
-        </div>
-        <div class="card">
-          <img src="images\original\Cutout-On-White.webp" alt="">
-          <h3>e-commerce Photo Editing</h3>
-          <p>
-            We are ready to change the product photos to fit your needs. We offer many services. These include cutout on white, background removal, color correction, image resizing, and creating artificial shadows. We can add different effects to the images and fix any flaws. This will improve the look and appeal of your products to potential buyers.Our service includes: - Photoshop Clipping Path - Background Removal - Photo Retouching - Color Correction - Image Resize and Crop - Shadows and Reflections - Image Enhancement - Customized EditsFor questions, doubts, and ideas, we prefer phone or email.
-          </p>
-        </div>
-        <div class="card">
-          <img src="images\original\Vehicles-Clipping-Path-shadowing-300x169.webp" alt="">
-          <h3>Image Shadowing</h3>
-          <p>
-            We provide professional shadow making in Photoshop. This helps create beautiful and realistic shadows for your product photos. You know how important it is to focus on the visual presentation of your products. If you need natural shadows, drop shadows, reflection shadows, or a mix of these, we can help you.Improve Your Product Photographs Today! To attract customers and encourage them to buy your product, our Photoshop shadow service can help. We can help you create shadows. This service is for E-commerce retailers, professional photographers, and graphic design agencies.There are three types of shadow making services. Original shadowing, natural shadowing, and drop shadow making service. We can make it upon client demands. Let me know which type you're referring to or if it's something different! If you have any sample to follow it will be helpful for our shadow making experts.
-          </p>
-        </div>
-        <div class="card">
-          <img src="images\original\Jewelry-Photo-Enhance-300x169.webp" alt="">
-          <h3>Jewelry Retouching</h3>
-          <p>
-            Are you a jewelry business owner, designer, or photographer looking for the best way to showcase your beautiful pieces? Our Jewelry Photo Retouching Service stands out as one of the premier options available in the market today. We specialize in enhancing the visual appeal of jewelry images, ensuring that every piece shines with its true brilliance.The jewelry retouching process is careful and detailed. It needs a sharp eye for detail and a good understanding of the materials. We focus on cleaning, scratch removal, and polishing.We remove bad reflections and edit the digital images. We correct contrast and brightness as need. We eliminate backgrounds from the jewelry. Finally, we create shadows and add finishing touches.Choose us and make your images sparkling with the help of our Jewelry Photo Retouching Service. Feel free to contact us to know more details and get the amazing result you’ve been looking for!
-          </p>
-        </div>
-        <div class="card">
-          <img src="images\original\Color-Correction-Service-300x180.webp" alt="">
-          <h3>Color Correction</h3>
-          <p>
-            Welcome to our Photoshop Color Correction service. We are here to turn your photos into beautiful works of art. Color correction is not just about making your images look good; it's about conveying the right mood and emotion. The colors in a photograph can significantly influence how viewers perceive the subject matter. We understand the nuances of color theory and the impact it has on visual storytelling. We want to ensure that the final product not only meets your expectations but exceeds them. We stay updated with industry trends to provide you with the best service possible. We understand that every project is unique. That's why we take the time to listen to your specific requirements and tailor our services to meet your vision. Get a quote today from Clipping Path AI to learn about how we can help with your color correction today. The minimum price that we offer for color correction service is $0.39 per Image.
-          </p>
-        </div>
-        <div class="card">
-          <img src="images\original\neck-joint-300x237.webp" alt="">
-          <h3>Neck Join</h3>
-          <p>
-            Are you currently involved in the clothing manufacturing or retail industry? Creating high-quality, attention-grabbing products is crucial for success in today's competitive market.Our high-quality neck join services enhance your clothing line's visual appeal and craftsmanship for a lasting customer impression. Allow us to present our Guaranteed Ghost Mannequin Service tailored to meet all your clothing photography needs. Our Ghost Mannequin Service encompasses various types of apparel, such as:- Tops, Shirts, and Blouses- Trousers, Jeans, and Pants- Dresses, Skirts, and Gowns- Coats, Jackets, and Outerwear- Swimwear and Shorts- Lingerie and Undergarments- Hosiery and Socks- Sportswear and ActivewearGet in touch with us today to discuss your needs, and let us elevate your clothing line in ways you never imagined!
-          </p>
-        </div>
-        <div class="card">
-          <img src="images\original\hair-masking-service-300x169.webp" alt="">
-          <h3>Image Masking</h3>
-          <p>
-            Image masking is the art of removing backgrounds from an image. Clipping mask on Photoshop creates a clean look that appears natural and untouched.Whether you have straight European hair or curly hair, our specialists use the latest technology. We mask individual hair strands and other details. This makes our cutouts blend perfectly into any background.The Image Masking service is perfect for anyone who needs photo editing. This includes selling products online or for publication.We provide high-quality work. We also understand that you have limited time and money. To ensure complete customer satisfaction, We offer free alterations until your project reaches perfection.Do you want to increase product image appeal and make the pictures look more attractive to a potential buyer? Please try us for free of cost.
-          </p>
-        </div>
-        <div class="card">
-          <img src="images\original\Headshot-retouch-300x180.webp" alt="">
-          <h3>Portrait Retouching</h3>
-          <p>
-            We transform your pictures into unique pieces of art! We are a team of professional Graphic designers work on digital face adjustments for portraits. We also enhance eyes and teeth. Skin retouching, body shaping, fabric retouching, hair retouching, background adjustments, color enhancement are the major parts of fashion retouching services.Hair cloning is another important task. They clean backgrounds and apply creative color grading. Finally, they add any necessary facial makeup.No matter your purpose, whether for business, memories, or social media, we dedicate ourselves to improving your photos. We can change boring images into artistic masterpieces that you would want to display at home.To get a quote, check the price list. You can also contact us now. Join our clients and enjoy the Portrait Retouching service!
-          </p>
-        </div>
-      </div>
-    </div>
 
-  </section>
+      </section>
 
-</main>
+    </main>
 
-
-<!-- js -->
-<script src="script.js"></script>
-</body>
+    <!-- js -->
+    <script src="script.js"></script>
+  </body>
 </html>

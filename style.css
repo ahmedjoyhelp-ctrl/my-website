@@ -18,10 +18,13 @@ img {
 :root{
   --primary-font: 'Livvic', sans-serif;
   --secondary-font: 'Inter', sans-serif;
-  --primary-color: #2aa8be;
+  --primary-color: #12c4e4;
   --secondary-color: #ff6257;
   --bg-color: #fafafa;
   --important-text-color: #4040af;
+  --primary-blue:#2563EB;
+  --sky-blue:#0EA5E9;
+  --dark-blue:#1E3A8A;
 }
 
 h1,
@@ -786,6 +789,7 @@ a {
     margin-bottom: 25px;
     font-weight: 700;
     font-size:clamp(32px, 6vw, 52px);
+    color: rgb(255, 255, 255);
 
     letter-spacing: 1px;
     line-height: 1.2;
@@ -966,7 +970,7 @@ a {
 
     padding-bottom:40px;
 
-    color:#222;
+    color: var(--primary-blue)
 }
 
 /* GRID CONTAINER */
@@ -1006,9 +1010,9 @@ a {
     transform:scale(0.1);
 
     transition:
-    opacity 0.6s ease,
-    transform 0.6s ease,
-    box-shadow 0.3s ease;
+    opacity 0.8s ease,
+    transform 1.3s ease,
+    box-shadow 0.4s ease;
 }
 
 /* ACTIVE WHEN SCROLLED */
@@ -1047,7 +1051,7 @@ a {
 
     margin-bottom:18px;
 
-    color:#222;
+    color:var(--primary-blue);
 }
 
 /* CARD TEXT */
@@ -1058,6 +1062,17 @@ a {
     line-height:1.5;
 
     color:#555;
+}
+
+/* ORDER NOW AND FREE TRIAL BUTTONS */
+.ordernowfreetrial{
+  margin-top:40px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.ordernowbtn-contentnone{
+  content: "";
 }
 
 /* =========================
@@ -1109,6 +1124,298 @@ a {
     }
 
     .card p{
+        font-size:15px;
+    }
+
+}
+
+/* =========================
+   SECTION 4 - FAQ
+========================= */
+
+.faq-section{
+    width:100%;
+
+    background:#ececec;
+
+    padding:80px 20px;
+}
+
+/* CONTAINER */
+
+.faq-container{
+    max-width:1200px;
+
+    margin:auto;
+}
+
+/* TITLE */
+
+.faq-container h2{
+    text-align:center;
+
+    font-size:clamp(32px, 6vw, 52px);
+
+    color:#2aa8e6;
+
+    margin-bottom:60px;
+
+    font-weight:700;
+}
+
+/* GRID */
+
+.faq-grid{
+    display:grid;
+
+    grid-template-columns:repeat(2, 1fr);
+
+    gap:60px;
+}
+
+/* COLUMN */
+
+.faq-column{
+    display:flex;
+
+    flex-direction:column;
+
+    gap:50px;
+}
+
+/* FAQ ITEM */
+
+.faq-item h3{
+    font-size:clamp(28px, 4vw, 42px);
+
+    color:#222;
+
+    line-height:1.2;
+
+    margin-bottom:20px;
+
+    font-weight:500;
+}
+
+.faq-item p{
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#333;
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:992px){
+
+    .faq-grid{
+        gap:40px;
+    }
+
+    .faq-item p{
+        font-size:17px;
+    }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:768px){
+
+    .faq-section{
+        padding:60px 20px;
+    }
+
+    .faq-grid{
+        grid-template-columns:1fr;
+
+        gap:40px;
+    }
+
+    .faq-column{
+        gap:40px;
+    }
+
+    .faq-item h3{
+        font-size:clamp(24px, 6vw, 34px);
+    }
+
+    .faq-item p{
+        font-size:16px;
+
+        line-height:1.7;
+    }
+
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media(max-width:480px){
+
+    .faq-section{
+        padding:50px 15px;
+    }
+
+    .faq-container h2{
+        margin-bottom:40px;
+    }
+
+    .faq-item h3{
+        font-size:28px;
+    }
+
+    .faq-item p{
+        font-size:15px;
+    }
+
+}
+
+/* =========================
+   SECTION 5 - WHY CHOOSE US
+========================= */
+
+.choose-section{
+    width:100%;
+
+    background:#ececec;
+
+    padding:80px 20px;
+}
+
+/* CONTAINER */
+
+.choose-container{
+    max-width:1500px;
+
+    margin:auto;
+}
+
+/* TITLE */
+
+.choose-container h2{
+    text-align:center;
+
+    font-size:clamp(32px, 6vw, 52px);
+
+    color:#2aa8e6;
+
+    margin-bottom:60px;
+
+    font-weight:700;
+}
+
+/* GRID */
+
+.choose-grid{
+    display:grid;
+
+    grid-template-columns:repeat(4, 1fr);
+
+    gap:50px;
+}
+
+/* ITEM */
+
+.choose-item{
+    text-align:center;
+}
+
+/* HEADING */
+
+.choose-item h3{
+    font-size:clamp(22px, 3vw, 32px);
+
+    color:#222;
+
+    margin-bottom:22px;
+
+    line-height:1.3;
+
+    font-weight:600;
+}
+
+/* PARAGRAPH */
+
+.choose-item p{
+    font-size:18px;
+
+    line-height:1.8;
+
+    color:#333;
+}
+
+/* =========================
+   LARGE TABLET
+========================= */
+
+@media(max-width:1200px){
+
+    .choose-grid{
+        grid-template-columns:repeat(2, 1fr);
+
+        gap:40px;
+    }
+
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media(max-width:768px){
+
+    .choose-section{
+        padding:60px 20px;
+    }
+
+    .choose-container h2{
+        margin-bottom:50px;
+    }
+
+    .choose-grid{
+        grid-template-columns:1fr;
+
+        gap:40px;
+    }
+
+    .choose-item h3{
+        font-size:28px;
+    }
+
+    .choose-item p{
+        font-size:16px;
+
+        line-height:1.7;
+    }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:480px){
+
+    .choose-section{
+        padding:50px 15px;
+    }
+
+    .choose-container h2{
+        margin-bottom:40px;
+    }
+
+    .choose-item h3{
+        font-size:24px;
+    }
+
+    .choose-item p{
         font-size:15px;
     }
 
