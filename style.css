@@ -1503,10 +1503,12 @@ a {
   max-width:100%;
   display:block;
   margin-bottom:30px;
+  margin-left:30px;
 }
 
 .footer-about address{
   font-style:normal;
+  margin-left:30px;
 
   font-size:16px;
   line-height:1.5;
@@ -1529,8 +1531,8 @@ a {
 ========================= */
 
 .upload-box{
-  background:#ffffff;
-  border:3px solid #ff5b5b;
+  background:#05bff800;
+  /* border:3px solid #ff5b5b; */
 
   border-radius:8px;
 
@@ -1542,8 +1544,10 @@ a {
 
 .upload-box h3{
   font-size:22px;
+  text-align:center;
   margin-bottom:20px;
-  color:#38a169;
+  /* border:3px solid #ff5b5b; */
+  color:#ffffff;
 }
 
 .upload-icons{
@@ -1598,7 +1602,7 @@ a {
 
 .footer-links ul li a{
   color:#111;
-  font-size:22px;
+  font-size:18px;
   font-weight:600;
 
   transition:.3s;
