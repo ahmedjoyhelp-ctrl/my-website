@@ -89,7 +89,8 @@ body{
 }
 
 .finalnavemargin {
-  margin-right: clamp(10px, 2.5vw, 50px);
+  margin-right: clamp(5px, 1.25vw, 25px);
+  margin-left: clamp(5px, 1.25vw, 25px);
   margin-top:0;
   padding-top: 0;
 }
@@ -195,7 +196,7 @@ body{
 .submenu {
   position: absolute;
   top: 100%;   /* directly under title */
-  width: 150%;
+  width: 120%;
   background: #00d4db;
 
   opacity: 1;
@@ -227,6 +228,10 @@ body{
   cursor: pointer;
   white-space: nowrap;
   transition: background 0.3s;
+}
+
+.item-for-sub a {
+  padding: 10px 10px;
 }
 
 a {
@@ -350,7 +355,7 @@ a {
   gap:3px;
 
   background:#f4f3fb;
-  padding:10px 15px;
+  padding:5px 15px;
 }
 
 .item{
@@ -363,15 +368,24 @@ a {
   color:#4b4b8f;
   font-size:14px;
   line-height:15px;
+
+  margin-left:30px;
 }
 
 .item p{
   margin-right:30px;
 }
 
-.item span{
-  font-size:15px;
+.vertical-line p {
+  content: "";
+  width: 1px;
+  height: 25px;
+  background: rgba(75, 75, 143, 0.13);
 }
+
+/* .item span{
+  font-size:15px;
+} */
 
 .verify-button img{
   width:auto;
@@ -384,7 +398,11 @@ a {
   background-repeat:no-repeat;
 }
 
-
+.star {
+  color: #00B77F;
+  font-size:25px;
+  
+}
 
 /* =========================
    HERO SECTION
@@ -665,7 +683,8 @@ a {
   /* MOBILE MENU */
 
   .nav-menu{
-    flex-direction:column;
+    /* flex-direction:column; */
+    flex-direction:row;
     align-items:flex-start;
 
     width:100%;
@@ -694,9 +713,13 @@ a {
   /* TOP BAR */
 
   .top-bar{
-    flex-direction:column;
+    flex-direction:row;
     gap:10px;
     padding:12px;
+  }
+
+  .remove-trustpolot {
+    display: none;
   }
 
   .item{
