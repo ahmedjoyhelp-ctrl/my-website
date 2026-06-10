@@ -1,7 +1,7 @@
 const openButton = document.getElementById('open-sidebar-button')
 const navbar = document.getElementById('navbar')
 
-const media = window.matchMedia("(width < 768px)")
+const media = window.matchMedia("(width < 700px)")
 
 media.addEventListener('change', (e) => updateNavbar(e))
 
@@ -30,30 +30,3 @@ function closeSidebar() {
 }
 
 updateNavbar(media)
-
-
-
-
-
-
-
-
-const cards = document.querySelectorAll('.card');
-
-const observer = new IntersectionObserver((entries) => {
-
-    entries.forEach((entry) => {
-
-        if(entry.isIntersecting){
-            entry.target.classList.add('show');
-        }
-
-    });
-
-}, {
-    threshold:0.2
-});
-
-cards.forEach((card) => {
-    observer.observe(card);
-});

@@ -100,8 +100,7 @@ body{
 .nav-menu{
   
   display:flex;
-  align-items:center;
-  gap:20px;
+  align-items: center;
   line-height: 18px;
   
   flex-wrap:wrap;
@@ -284,6 +283,7 @@ a {
 /* BUTTON */
 
 .trial-btn{
+  display: flex;
   background:#ff6257;
   color:white;
 
