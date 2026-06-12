@@ -27,124 +27,126 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     
     <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="js/script.js" defer></script>
     
   </head>
 
 
   <body>
-
-    <!-- =========================
-        HEADER
-    ========================= -->
     <header>
 
       <!-- =========================
-          NAVBAR
+          TOP NAVBAR DO NOT CHANGE CLASS OR ID
       ========================= -->
-      <nav class="navbar">
+      <button id="open-sidebar-button" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false" aria-controls="navbar">
+        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9"><path d="M153.33-240q-14.16 0-23.75-9.62-9.58-9.61-9.58-23.83 0-14.22 9.58-23.72 9.59-9.5 23.75-9.5h653.34q14.16 0 23.75 9.62 9.58 9.62 9.58 23.83 0 14.22-9.58 23.72-9.59 9.5-23.75 9.5H153.33Zm0-206.67q-14.16 0-23.75-9.61-9.58-9.62-9.58-23.84 0-14.21 9.58-23.71 9.59-9.5 23.75-9.5h653.34q14.16 0 23.75 9.61 9.58 9.62 9.58 23.84 0 14.21-9.58 23.71-9.59 9.5-23.75 9.5H153.33Zm0-206.66q-14.16 0-23.75-9.62-9.58-9.62-9.58-23.83 0-14.22 9.58-23.72 9.59-9.5 23.75-9.5h653.34q14.16 0 23.75 9.62 9.58 9.61 9.58 23.83 0 14.22-9.58 23.72-9.59 9.5-23.75 9.5H153.33Z"/></svg>
+      </button>
 
-        <div class="nav-container">
-
-          <!-- LOGO -->
+      <!-- MOBILE LOGO -->
+      <div id="mobile-logo">
+        <a href="#">
+          <img src="images/logo_house.svg" alt="Logo">
+        </a>
+      </div>
+      <nav id="navbar">
+        <div class="nav-left-right" id="logo">
           <a href="#" class="logo">
-              <img src="images/logo_house.svg" alt="Logo">
+            <img src="images/logo_house.svg" alt="Logo">
           </a>
+        </div>
+        <ul class="master">
+          <li>
+            <button id="close-sidebar-button" onclick="closeSidebar()" aria-label="close sidebar">
+              <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9"><path d="M480-433.33 274.67-228q-9.67 9.67-23.34 9.67-13.66 0-23.33-9.67-9.67-9.67-9.67-23.33 0-13.67 9.67-23.34L433.33-480 228-685.33q-9.67-9.67-9.67-23.34 0-13.66 9.67-23.33 9.67-9.67 23.33-9.67 13.67 0 23.34 9.67L480-526.67 685.33-732q9.67-9.67 23.34-9.67 13.66 0 23.33 9.67 9.67 9.67 9.67 23.33 0 13.67-9.67 23.34L526.67-480 732-274.67q9.67 9.67 9.67 23.34 0 13.66-9.67 23.33-9.67 9.67-23.33 9.67-13.67 0-23.34-9.67L480-433.33Z"/></svg>
+            </button>
+          </li>
+          <li id="humberg-logo"><a href="#" class="humberg-logo"><img src="images/logo_house.svg" alt="Logo"></a></li>
+          <li class="home-li"><a class="active-link" aria-current="page" href="index.html">HOME</a></li>
+          
+          <!-- drop down -->
+          
+          <li class="menu">
 
-          <!-- MOBILE MENU BUTTON -->
-          <input type="checkbox" id="menu-toggle">
+            <a href="#" class="menu-title nav-text-hover photoeditinglala finalnavemargin">
+                PHOTO EDITING
+                <span class="mobile-arrow">
+                    <i class="fa-solid fa-angle-down"></i>
+                </span>
+            </a>
 
-          <label for="menu-toggle" class="hamburger">
-              <i class="fa-solid fa-bars"></i>
-          </label>
-
-          <!-- RIGHT SIDE -->
-          <div class="nav-right">
-
-            <!-- MENU -->
-            <ul class="nav-menu">
-
-              <li class="nav-text-hover">
-                <a class="finalnavemargin" href="#">HOME</a>
-              </li>
-
-              <li class="menu">
-
-                <a href="#" class="menu-title nav-text-hover photoeditinglala finalnavemargin">
-                    PHOTO EDITING
-                    <span>
-                        <i class="fa-solid fa-angle-down"></i>
-                    </span>
-                </a>
-
-                <ul class="submenu">
-
-                  <li class="item-for-sub nav-text-hover">
-                    <a href="#">Ghost Mannequin</a>
-                  </li>
-
-                  <li class="item-for-sub nav-text-hover">
-                    <a href="#">ECommerce Edit <span>></span></a>
-                  </li>
-
-                  <li class="item-for-sub nav-text-hover">
-                    <a href="#">Fashion Retouch <span>></span></a>
-                  </li>
-
-                  <li class="item-for-sub nav-text-hover">
-                    <a href="#">Furniture Edit</a>
-                  </li>
-
-                  <li class="item-for-sub nav-text-hover">
-                    <a href="#">Shadow Making <span>></span></a>
-                  </li>
-
-                  <li class="item-for-sub nav-text-hover">
-                    <a href="#">Real Estate Retouch</a>
-                  </li>
-
-                  <li class="item-for-sub nav-text-hover">
-                    <a href="#">Car Photo Edit</a>
-                  </li>
-
+            <ul class="submenu">
+              
+              <li class="item-for-sub nav-text-hover has-child">
+                <a href="#">ECommerce Edit <span class="mobile-arrow">⌃</span></a>
+                <ul class="sub-submenu">
+                  <li><a href="#">Eyeglass Photo Edit</a></li>
+                  <li><a href="#">Hat And Bag Photo Edit</a></li>
+                  <li><a href="#">Shoes Photo Edit</a></li>
                 </ul>
-
+              </li>
+              
+              <li class="item-for-sub nav-text-hover">
+                <a href="#">Neck Join</a>
+              </li>
+              
+              <li class="item-for-sub nav-text-hover has-child">
+                <a href="#">Fashion Retouch <span class="mobile-arrow">⌃</span></a>
+                <ul class="sub-submenu">
+                  <li><a href="#">Portrait Retouch</a></li>
+                  <li><a href="#">Headshot Retouch</a></li>
+                  <li><a href="#">Maternity Retouch</a></li>
+                  <li><a href="#">Wedding Retouch</a></li>
+                  <li><a href="#">Newborn Retouch</a></li>
+                </ul>
               </li>
 
-              <li class="nav-text-hover">
-                <a class="finalnavemargin" href="#">CLIPPING PATH</a>
+              <li class="item-for-sub nav-text-hover">
+                <a href="#">Furniture Edit</a>
               </li>
 
-              <li class="nav-text-hover">
-                <a class="finalnavemargin" href="#">JEWELRY RETOUCH</a>
+              <li class="item-for-sub nav-text-hover has-child">
+                <a href="#">Shadow Making <span class="mobile-arrow">⌃</span></a>
+                <ul class="sub-submenu">
+                  <li><a href="#">Drop Shadow</a></li>
+                  <li><a href="#">Original Shadow</a></li>
+                  <li><a href="#">Reflection Shadow</a></li>
+                </ul>
               </li>
 
-              <li class="nav-text-hover">
-                <a class="finalnavemargin" href="#">IMAGE MASKING</a>
+              <li class="item-for-sub nav-text-hover">
+                <a href="#">Real Estate Retouch</a>
               </li>
 
-              <!-- BUTTON -->
-              <li>
-                <a href="#" class="trial-btn">
-                  FREE TRIAL
-                </a>
+              <li class="item-for-sub nav-text-hover">
+                <a href="#">Car Photo Edit</a>
               </li>
 
             </ul>
 
-          </div>
+          </li>
 
-        </div>
+          <!-- drop down end-->
 
+
+          <li><a href="features.html">CLIPPING PATH</a></li>
+          <li><a href="pricing.html">JEWELRY RETOUCH</a></li>
+          <li><a href="pricing.html">IMAGE MASKING</a></li>
+          <li><a class="accent-link nav-left-right" href="login.html">FREE TRIAL</a></li>
+        </ul>
       </nav>
+
+      <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
+      
 
 
 
       <!-- =========================
-          TOP BAR
+          BOTTOM BAR
       ========================= -->
       <div class="secondary-nav">
 
-        <ul class="top-bar">
+        <ul class="bottom-bar">
 
           <li class="item">
             <span><i class="fa-solid fa-dollar-sign"></i></span>
@@ -729,7 +731,6 @@
 
     </footer>
 
-    <!-- js -->
-    <script src="js/script.js"></script>
+    
   </body>
 </html>

@@ -1,3 +1,5 @@
+//TOPBAR
+
 const openButton = document.getElementById('open-sidebar-button')
 const navbar = document.getElementById('navbar')
 
@@ -31,6 +33,47 @@ function closeSidebar() {
 
 updateNavbar(media)
 
+//TOPBAR END
+
+
+
+//drop down
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    // Main dropdown
+    document.querySelectorAll(".menu-title").forEach(item => {
+
+        item.addEventListener("click", function(e) {
+
+            if(window.innerWidth > 768) return;
+
+            e.preventDefault();
+            e.stopPropagation();
+
+            this.closest(".menu").classList.toggle("mobile-open");
+
+        });
+
+    });
+
+    // Second level dropdowns
+    document.querySelectorAll(".has-child > a").forEach(item => {
+
+        item.addEventListener("click", function(e) {
+
+            if(window.innerWidth > 768) return;
+
+            e.preventDefault();
+            e.stopPropagation();
+
+            this.closest(".has-child").classList.toggle("mobile-open");
+
+        });
+
+    });
+
+});
 
 
 
@@ -38,6 +81,9 @@ updateNavbar(media)
 
 
 
+
+
+//CARDS
 const cards = document.querySelectorAll('.card');
 
 const observer = new IntersectionObserver((entries) => {
@@ -57,3 +103,5 @@ const observer = new IntersectionObserver((entries) => {
 cards.forEach((card) => {
     observer.observe(card);
 });
+
+//CARDS END

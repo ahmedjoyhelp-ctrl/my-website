@@ -40,13 +40,7 @@
 
 @media(max-width:1100px){
 
-    .nav-menu{
-        gap:25px;
-    }
-
-    .nav-right{
-        gap:25px;
-    }
+    
 
     .hero{
         padding:60px 30px;
@@ -61,15 +55,9 @@
         justify-content:center;
     }
 
-    .menu-title {
-        background: #003c4600;
-        padding: 0;
-    }
     
-    .menu{
-        display: flex;
-        justify-content: start;
-    }
+    
+    
 
     .remove-trustpolot {
         display: none;
@@ -136,9 +124,7 @@
         padding: 80px 20px;
     }
 
-    /* .hero-content h2 {
-        font-size: 38px;
-    } */
+    
 
     .hero-content p {
         font-size: 16px;
@@ -148,96 +134,257 @@
         padding: 12px 28px;
     }
 
-  /* NAVBAR */
-
-    .navbar{
-        padding:15px 20px;
+    /* TOP NAVBAR */
+    #open-sidebar-button, #close-sidebar-button {
+        display: block;
     }
 
-    /* SHOW HAMBURGER */
-
-    .hamburger{
-        display:block;
-
-        position:relative;
-        z-index:1002;
+    #open-sidebar-button svg{
+        fill: #ff6257;
     }
 
-    /* SIDEBAR MENU */
-
-    .nav-right{
-        position:fixed;
-
-        top:0;
-        right:-320px;
-
-        width:300px;
-        height:100vh;
-
-        background:white;
-
-        flex-direction:row;
-        align-items:flex-start;
-
-        padding:100px 30px 50px;
-
-        gap:25px;
-
-        transition:.4s ease;
-
-        z-index:1001;
+    #mobile-logo {
+        display: inline-block;
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        height: 60px;
+        width: 60px;
     }
 
-    /* SHOW MENU */
-
-    #menu-toggle:checked ~ .nav-right{
-        right:0;
+    #logo {
+        display: none;
+    }
+    
+    .logo {
+        display: none;
     }
 
-    /* SHOW OVERLAY */
 
-    #menu-toggle:checked ~ .overlay{
-        opacity:1;
-        visibility:visible;
+    #humberg-logo {
+        height: 80px;
+        width: 80px;
+        margin: 0;
+        margin: 0 0 0 40px;
+    }
+    
+    .humberg-logo {
+        height: 100%;
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 
-    /* MOBILE MENU */
-
-    .nav-menu{
-        /* flex-direction:column; */
-        flex-direction:row;
-        align-items:flex-start;
-
-        width:100%;
-
-        gap:22px;
+    .humberg-logo:hover {
+        background-color: unset;
     }
 
-    .nav-menu li{
-        width:100%;
+    nav{
+        padding: 0;
+        display: block;
+        justify-content: flex-start;
+        align-items: flex-start;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        height: 100vh;
+        /* width: min(15em, 100%); */
+        width: 85%;
+        max-width: 420px;
+        z-index: 10;
+        transition: right 300ms ease-in-out;
     }
 
-    .nav-menu li a{
-        color:#222;
-        font-size:18px;
+    .master {
+        
+        align-items: start;
     }
 
-    /* BUTTON */
-
-    .trial-btn{
-        width:100%;
-        max-width:100%;
-
-        position:relative;
-        /* z-index:1002; */
-        top: 20px;
-
-        text-align:center;
+    nav.show {
+        right: 0;
     }
 
-    /* TOP BAR */
+    nav.show ~ #overlay {
+        display: block;
+    }
 
-    .top-bar{
+    nav ul {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    nav a { 
+        width: 100vh;
+        display: block;
+        padding:12px 28px;
+    } 
+
+    nav a:hover {
+        background-color: rgb(0, 102, 255);
+        color: white;
+    }
+
+    
+
+    .logo {        
+        margin-right: 0;
+        padding: 0;
+        
+    }
+
+    #logo {
+        display: block;
+        justify-content: unset;
+    }
+
+    nav a.accent-link {
+        /* option 1 */
+        /* width: 100%;
+        margin-left: clamp(1rem, calc(2vw + 1rem), 1.5rem);
+        margin-right: clamp(1rem, calc(2vw + 1rem), 1.5rem); */
+        
+        /* option 2 */
+        width: 100vh;
+        border-radius: 0;
+    }
+
+    /* TOP NABAR END */
+
+
+
+
+    /* ======================
+   MOBILE ACCORDION MENU+ drop down
+====================== */
+
+.menu {
+    width: 100%;
+    display: block;
+}
+
+/* .menu-title {
+    width: 100%;
+    padding: 18px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+} */
+
+
+.nav-text-hover {
+    padding: 0;
+    margin: 0;       
+}
+
+.photoeditinglala {
+    padding: 0;
+    margin: 0;       
+}
+
+.finalnavemargin {
+    padding: 0;
+    margin: 0;       
+}
+
+
+nav .menu-title{
+        
+        padding:12px 28px;
+        display:flex;
+        align-items:center;
+        justify-content:space-between;
+        text-align:left;
+        width: 100%;
+    }
+
+.menu > .submenu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    display: none;
+    background: #006174;
+    width: 100%;
+}
+
+.menu.mobile-open > .submenu {
+    display: block;
+}
+
+.item-for-sub {
+    display: block;
+    width: 100%;
+    border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.item-for-sub > a {
+    width: 100%;
+    padding: 16px 22px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.sub-submenu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    display: none;
+    min-width: 100%;
+    background: #005464;
+}
+
+.has-child.mobile-open > .sub-submenu {
+    display: block;
+}
+
+.sub-submenu li a {
+    padding: 15px 35px;
+    font-size: 15px;
+}
+
+.mobile-arrow {
+    font-size: 20px;
+    padding: 0;
+    margin: 0;
+    transition: .3s;
+}
+
+.mobile-open > a .mobile-arrow,
+.mobile-open > .menu-title .mobile-arrow {
+    transform: rotate(180deg);
+}
+
+/* screenshot active item */
+.has-child.mobile-open > a {
+    background: #18bde7;
+}
+
+.menu.mobile-open > .menu-title {
+    color: #18d6ff;
+}
+
+/* free trial button */
+nav a.accent-link {
+    margin-top: 20px;
+    width: calc(100% - 20px);
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 50px;
+    text-align: center;
+    justify-content: center;
+}
+
+    
+
+    
+
+    
+
+
+
+    /* BOTTOm BAR */
+
+    .bottom-bar{
         flex-direction:row;
         gap:10px;
     }

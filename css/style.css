@@ -25,12 +25,12 @@ img {
   --primary-blue:#2563EB;
   --sky-blue:#0EA5E9;
   --dark-blue:#1E3A8A;
+  --accent-color: #2281ec;
 }
 
 h1,
 h2,
 h3,
-.nav-menu,
 .btn{
   font-family: var(--primary-font);
 }
@@ -43,167 +43,137 @@ a{
   font-family: var(--secondary-font);
 }
 
-body{
+body {
   background: var(--bg-color);
   overflow-x:hidden;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
+
+/* TOP NAVBAR */
+nav {
+    background-color: #12c4e4;
+    width: 100%;
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 0 10px 0 10px;
 }
 
 
 
-/* =========================
-   NAVBAR
-========================= */
-
-.navbar{
-  width:100%;
-  background: var(--primary-color);
-  padding:15px 25px;
+.master {
+max-width: 1400px;
+white-space: nowrap;
+flex-wrap: wrap;
+display: flex;
+justify-content: center;
+align-items: center;
 }
 
-.nav-container{
-  max-width:1400px;
-  margin:auto;
-
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-
-  position:relative;
+nav ul {
+    list-style: none;
+    display: flex;
 }
 
-/* LOGO */
-
-.logo img{
-  width:90px;
-  margin-right:40px;
-  display:block;
+#mobile-logo {
+  display: none;
 }
 
-/* RIGHT SIDE */
-
-.nav-right{
-  display:flex;
-  align-items:center;
-  /* flex-wrap:wrap; */
-  justify-content:center;
+.logo {
+    height: 90px;
+    width: 90px;
+    margin-right: 90px;
+    padding: 0;
 }
 
-.finalnavemargin {
-  margin-right: clamp(5px, 1.25vw, 25px);
-  margin-left: clamp(5px, 1.25vw, 25px);
-  margin-top:0;
-  padding-top: 0;
+#logo {
+    display: flex;
+    justify-content: center;
 }
 
-/* MENU */
-
-.nav-menu{
-  
-  display:flex;
-  align-items: center;
-  line-height: 18px;
-  
-  flex-wrap:wrap;
-  justify-content:center;
-
-  list-style:none;
+nav li {
+    display: flex;
 }
 
-/* KEEP TEXT IN ONE LINE */
-
-.nav-menu li a{
-  color:white;
-  text-decoration:none;
-
-  font-size:18px;
-  font-weight:700;
-
-  white-space:nowrap;
+nav a {
+    display: flex;
+    text-decoration: none;
+    color: white;
+    font-size:clamp(1rem, calc(1vw + .5rem), 1.1rem);
+    font-weight: 700;
+    padding-bottom: 0.6rem;
+    padding-top: 0.6rem;
+    padding-left: clamp(1rem, calc(2vw + 1rem), 1.5rem);
+    padding-right: clamp(1rem, calc(2vw + 1rem), 1.5rem);
+    transition: background-color 300ms ease;
 }
 
-.nav-menu li{
-  margin:0;
-  padding:0;
+nav a:hover {
+  color: rgb(0, 102, 255);
+}
+
+nav a.accent-link {
+    background-color: #ff6257;
+    color: white;
+    display: flex;
+    border-radius: 30px;
+}
+
+nav a.accent-link:hover {
+    background-color: #ff1100;
+    display: flex;
+}
+
+#open-sidebar-button {
+    display: none;
+    background: none;
+    border: none;
+    padding: 1em;
+    margin-left: auto;
+    cursor: pointer;
+}
+
+#close-sidebar-button {
+    display: none;
+    background: none;
+    border: none;
+    padding: 1em;
+    cursor: pointer;
+}
+
+#overlay {
+    background: rgba(0, 0, 0, .5);
+    position: fixed;
+    inset: 0;
+    z-index: 9;
+    display: none;
 }
 
 
-/* nav text hover */
-.nav-text-hover:hover a {
+
+/* nav text hover  need this letter*/
+/* .nav-text-hover:hover a {
   color: var(--important-text-color);
   transition:.3s;
-}
+} */
 
-.photoeditinglala:hover {
-  color: var(--important-text-color);
-  transition:.1s;
-}
+
+/* TOP NABAR END */
 
 
 
 
 
+/* SUB MENU 1 */
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* trying myself for dropdown pannel strat here */
-/* Container */
 .menu {
   width: auto;
   position: relative; /* IMPORTANT */
   display: flex;
   justify-content: center;
-}
-
-/* Title */
-.menu-title {
-  background: var(--primary-color);
-  color: white;
-  padding: 12px 0;
-  font-weight: bold;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-/* Submenu (hidden) */
-.submenu {
-  position: absolute;
-  top: 100%;   /* directly under title */
-  width: 120%;
-  background: #00d4db;
-
-  opacity: 1;
-  visibility: hidden;
-  transform: translateY(0); /* remove gap */
-
-  z-index: 1000;
-
 }
 
 /* Show on hover */
@@ -214,12 +184,54 @@ body{
   transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
+/* Title */
+.menu-title {
+  padding: 0;
+  /* line-height: 50px; */
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+
+
+/* Submenu (hidden) */
+.submenu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+
+  display: flex;
+  flex-direction: column; /* <-- change */
+
+  background: #00d4db;
+
+  opacity: 0;
+  visibility: hidden;
+
+  z-index: 1000;
+}
+
+
+
+
+.finalnavemargin {
+  margin-right: clamp(5px, 1.25vw, 25px);
+  margin-left: clamp(5px, 1.25vw, 25px);
+  margin-top:0;
+  padding-top: 0;
+  display: flex;
+}
+
+
+
+
 /* Items */
-.item-for-sub {
-  font-size:18px;
-  font-weight:600;
-  padding: 12px 25px;
-  color: #e6f4f6;
+.item-for-sub {  
+  padding: 0;  
   border-bottom: 1px solid rgba(10, 86, 105, 0.1);
   display: flex;
   justify-content: space-between;
@@ -230,12 +242,12 @@ body{
 }
 
 .item-for-sub a {
-  padding: 10px 10px;
-}
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 
-a {
-  text-decoration: none;
-  color: white;
+    width: 100%;
+    padding: 12px 25px;
 }
 
 .item-for-sub:hover {
@@ -244,101 +256,157 @@ a {
 
 /* Arrow */
 .item-for-sub span {
-  font-size: 20px;
-}
-/* end here */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/* BUTTON */
-
-.trial-btn{
-  display: flex;
-  background:#ff6257;
-  color:white;
-
-  text-decoration:none;
-
-  padding:13px 28px;
-  
-  border-radius:50px;
-
-  font-size: 18px;
-  font-weight:700;
-
-  white-space:nowrap;
-
-  transition:.3s;
-}
-
-.trial-btn:hover{
-  background:#ff1100;
-}
-
-/* HAMBURGER */
-
-#menu-toggle{
-  display:none;
-}
-
-.hamburger{
-  display:none;
-
-  font-size:30px;
-  color:#ff6257;
-
-  cursor:pointer;
+  font-size: auto;
+  padding: 0 0 0 50px;
 }
 
 
 
-/* =========================
-   OVERLAY
-========================= */
 
-.overlay{
-  position:fixed;
-  inset:0;
 
-  background:rgba(0,0,0,0.45);
 
-  opacity:0;
-  visibility:hidden;
 
-  transition:.3s;
 
-  z-index:999;
+
+
+
+/* SUB MENU 2 */
+
+
+
+
+
+/* Parent item */
+.has-child{
+    position: relative;
 }
+
+/* Hide second submenu */
+.sub-submenu{
+    position: absolute;
+    top: 0;
+    left: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    min-width: 250px;
+
+    background: #00d4db;
+
+    list-style: none;
+
+    opacity: 0;
+    visibility: hidden;
+
+    transition: .3s;
+}
+
+/* Show on hover */
+.has-child:hover .sub-submenu{
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Links */
+.sub-submenu li {
+    display: block;
+    padding: 0;
+    text-decoration: none;
+}
+
+.sub-submenu a {
+    display: block;
+    padding: 12px 25px;
+    width: 100%;
+    text-decoration: none;
+}
+
+.sub-submenu li a:hover{
+    background: #00e1ff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -346,7 +414,7 @@ a {
    TOP BAR
 ========================= */
 
-.top-bar{
+.bottom-bar{
   display:flex;
   justify-content:space-around;
   align-items:center;
