@@ -53,7 +53,7 @@ body {
 
 /* TOP NAVBAR */
 nav {
-    background-color: #12c4e4;
+    background-color: var(--primary-color);
     width: 100%;
     height: 100px;
     display: flex;
@@ -63,8 +63,8 @@ nav {
 }
 
 
-
 .master {
+
 max-width: 1400px;
 white-space: nowrap;
 flex-wrap: wrap;
@@ -153,14 +153,6 @@ nav a.accent-link:hover {
 }
 
 
-
-/* nav text hover  need this letter*/
-/* .nav-text-hover:hover a {
-  color: var(--important-text-color);
-  transition:.3s;
-} */
-
-
 /* TOP NABAR END */
 
 
@@ -187,7 +179,6 @@ nav a.accent-link:hover {
 /* Title */
 .menu-title {
   padding: 0;
-  /* line-height: 50px; */
   cursor: pointer;
   display: flex;
   justify-content: space-between;
@@ -310,6 +301,7 @@ nav a.accent-link:hover {
 
 /* Links */
 .sub-submenu li {
+    border-bottom: 1px solid rgba(10, 86, 105, 0.1);
     display: block;
     padding: 0;
     text-decoration: none;
@@ -317,7 +309,7 @@ nav a.accent-link:hover {
 
 .sub-submenu a {
     display: block;
-    padding: 12px 25px;
+    padding: 12.5px 25px;
     width: 100%;
     text-decoration: none;
 }
@@ -1345,6 +1337,7 @@ nav a.accent-link:hover {
   color:#111;
   font-size:18px;
   font-weight:600;
+  text-decoration: none;
 
   transition:.3s;
 }

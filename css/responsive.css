@@ -196,6 +196,7 @@
     }
 
     .master {
+        background-color: var(--primary-color);
         
         align-items: start;
     }
