@@ -1,39 +1,45 @@
-//TOPBAR
+// TOPBAR
 
-const openButton = document.getElementById('open-sidebar-button')
-const navbar = document.getElementById('navbar')
-
-const media = window.matchMedia("(width < 768px)")
-
-media.addEventListener('change', (e) => updateNavbar(e))
+const openButton = document.getElementById('open-sidebar-button');
+const navbar = document.getElementById('navbar');
+const media = window.matchMedia('(width < 768px)');
 
 function updateNavbar(e) {
-    const isMobile = e.matches
-    console.log(isMobile)
-    if (isMobile) {
-        navbar.setAttribute('inert', '')
+    if (!navbar) return;
+
+    if (e.matches) {
+        navbar.setAttribute('inert', '');
+        return;
     }
-    else {
-        //Desktop device
-        navbar.removeAttribute('inert')
-    }
+
+    navbar.classList.remove('show');
+    navbar.removeAttribute('inert');
+    openButton?.setAttribute('aria-expanded', 'false');
 }
 
 function openSidebar() {
-    navbar.classList.add('show')
-    openButton.setAttribute('aria-expanded', 'true')
-    navbar.removeAttribute('inert')
+    if (!navbar || !openButton) return;
+
+    navbar.classList.add('show');
+    openButton.setAttribute('aria-expanded', 'true');
+    navbar.removeAttribute('inert');
 }
 
 function closeSidebar() {
-    navbar.classList.remove('show')
-    openButton.setAttribute('aria-expanded', 'false')
-    navbar.setAttribute('inert', '')
+    if (!navbar || !openButton) return;
+
+    navbar.classList.remove('show');
+    openButton.setAttribute('aria-expanded', 'false');
+
+    if (media.matches) {
+        navbar.setAttribute('inert', '');
+    }
 }
 
-updateNavbar(media)
+media.addEventListener('change', updateNavbar);
+updateNavbar(media);
 
-//TOPBAR END
+// TOPBAR END
 
 
 
@@ -46,7 +52,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         item.addEventListener("click", function(e) {
 
-            if(window.innerWidth > 768) return;
+            if(!media.matches) return;
 
             e.preventDefault();
             e.stopPropagation();
@@ -62,7 +68,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
         item.addEventListener("click", function(e) {
 
-            if(window.innerWidth > 768) return;
+            if(!media.matches) return;
 
             e.preventDefault();
             e.stopPropagation();
@@ -86,6 +92,7 @@ document.addEventListener("DOMContentLoaded", () => {
 //CARDS
 const cards = document.querySelectorAll('.card');
 
+if ('IntersectionObserver' in window) {
 const observer = new IntersectionObserver((entries) => {
 
     entries.forEach((entry) => {
@@ -103,5 +110,92 @@ const observer = new IntersectionObserver((entries) => {
 cards.forEach((card) => {
     observer.observe(card);
 });
+} else {
+    cards.forEach((card) => {
+        card.classList.add('show');
+    });
+}
 
 //CARDS END
+
+// FREE TRIAL UPLOAD
+const trialUpload = document.getElementById('trial-upload');
+const fileCount = document.getElementById('file-count');
+const formMessage = document.getElementById('form-message');
+
+if (trialUpload) {
+    trialUpload.addEventListener('change', () => {
+        if (trialUpload.files.length > 2) {
+            trialUpload.value = '';
+            if (fileCount) fileCount.textContent = 'No files selected';
+            if (formMessage) formMessage.textContent = 'Please upload a maximum of 2 files for the free trial.';
+            return;
+        }
+
+        if (fileCount) {
+            const count = trialUpload.files.length;
+            fileCount.textContent = count === 1 ? '1 file selected' : `${count} files selected`;
+        }
+
+        if (formMessage) {
+            formMessage.textContent = '';
+        }
+    });
+}
+
+// CLIPPING PATH CAROUSEL
+document.querySelectorAll('[data-carousel]').forEach((carousel) => {
+    const images = Array.from(carousel.querySelectorAll('.clipping-carousel-image'));
+    const dots = Array.from(carousel.querySelectorAll('[data-carousel-dot]'));
+    const previousButton = carousel.querySelector('[data-carousel-prev]');
+    const nextButton = carousel.querySelector('[data-carousel-next]');
+    let activeIndex = 0;
+    let timerId;
+
+    if (!images.length) return;
+
+    function showSlide(index) {
+        activeIndex = (index + images.length) % images.length;
+
+        images.forEach((image, imageIndex) => {
+            image.classList.toggle('is-active', imageIndex === activeIndex);
+        });
+
+        dots.forEach((dot, dotIndex) => {
+            const isActive = dotIndex === activeIndex;
+            dot.classList.toggle('is-active', isActive);
+            dot.setAttribute('aria-current', isActive ? 'true' : 'false');
+        });
+    }
+
+    function startCarousel() {
+        timerId = window.setInterval(() => {
+            showSlide(activeIndex + 1);
+        }, 3000);
+    }
+
+    function restartCarousel() {
+        window.clearInterval(timerId);
+        startCarousel();
+    }
+
+    previousButton?.addEventListener('click', () => {
+        showSlide(activeIndex - 1);
+        restartCarousel();
+    });
+
+    nextButton?.addEventListener('click', () => {
+        showSlide(activeIndex + 1);
+        restartCarousel();
+    });
+
+    dots.forEach((dot) => {
+        dot.addEventListener('click', () => {
+            showSlide(Number(dot.dataset.carouselDot));
+            restartCarousel();
+        });
+    });
+
+    showSlide(0);
+    startCarousel();
+});

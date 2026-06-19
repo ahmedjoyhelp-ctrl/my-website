@@ -28,187 +28,16 @@
     
     <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 
+    <script src="js/layout.js" defer></script>
     <script src="js/script.js" defer></script>
     
   </head>
 
 
   <body>
-    <header>
+    <div data-site-header></div>
 
-      <!-- =========================
-          TOP NAVBAR DO NOT CHANGE CLASS OR ID
-      ========================= -->
-      <button id="open-sidebar-button" onclick="openSidebar()" aria-label="open sidebar" aria-expanded="false" aria-controls="navbar">
-        <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9"><path d="M153.33-240q-14.16 0-23.75-9.62-9.58-9.61-9.58-23.83 0-14.22 9.58-23.72 9.59-9.5 23.75-9.5h653.34q14.16 0 23.75 9.62 9.58 9.62 9.58 23.83 0 14.22-9.58 23.72-9.59 9.5-23.75 9.5H153.33Zm0-206.67q-14.16 0-23.75-9.61-9.58-9.62-9.58-23.84 0-14.21 9.58-23.71 9.59-9.5 23.75-9.5h653.34q14.16 0 23.75 9.61 9.58 9.62 9.58 23.84 0 14.21-9.58 23.71-9.59 9.5-23.75 9.5H153.33Zm0-206.66q-14.16 0-23.75-9.62-9.58-9.62-9.58-23.83 0-14.22 9.58-23.72 9.59-9.5 23.75-9.5h653.34q14.16 0 23.75 9.62 9.58 9.61 9.58 23.83 0 14.22-9.58 23.72-9.59 9.5-23.75 9.5H153.33Z"/></svg>
-      </button>
-
-      <!-- MOBILE LOGO -->
-      <div id="mobile-logo">
-        <a href="#">
-          <img src="images/logo_house.svg" alt="Logo">
-        </a>
-      </div>
-      <nav id="navbar">
-        <div class="nav-left-right" id="logo">
-          <a href="#" class="logo">
-            <img src="images/logo_house.svg" alt="Logo">
-          </a>
-        </div>
-        <ul class="master">
-          <li>
-            <button id="close-sidebar-button" onclick="closeSidebar()" aria-label="close sidebar">
-              <svg xmlns="http://www.w3.org/2000/svg" height="40px" viewBox="0 -960 960 960" width="40px" fill="#c9c9c9"><path d="M480-433.33 274.67-228q-9.67 9.67-23.34 9.67-13.66 0-23.33-9.67-9.67-9.67-9.67-23.33 0-13.67 9.67-23.34L433.33-480 228-685.33q-9.67-9.67-9.67-23.34 0-13.66 9.67-23.33 9.67-9.67 23.33-9.67 13.67 0 23.34 9.67L480-526.67 685.33-732q9.67-9.67 23.34-9.67 13.66 0 23.33 9.67 9.67 9.67 9.67 23.33 0 13.67-9.67 23.34L526.67-480 732-274.67q9.67 9.67 9.67 23.34 0 13.66-9.67 23.33-9.67 9.67-23.33 9.67-13.67 0-23.34-9.67L480-433.33Z"/></svg>
-            </button>
-          </li>
-          <li id="humberg-logo"><a href="#" class="humberg-logo"><img src="images/logo_house.svg" alt="Logo"></a></li>
-          <li class="home-li"><a class="active-link" aria-current="page" href="index.html">HOME</a></li>
-          
-          <!-- drop down -->
-          
-          <li class="menu">
-
-            <a href="#" class="menu-title nav-text-hover photoeditinglala finalnavemargin">
-                PHOTO EDITING
-                <span class="mobile-arrow">
-                    <i class="fa-solid fa-angle-down"></i>
-                </span>
-            </a>
-
-            <ul class="submenu">
-              
-              <li class="item-for-sub nav-text-hover has-child">
-                <a href="#">ECommerce Edit <span class="mobile-arrow">⌃</span></a>
-                <ul class="sub-submenu">
-                  <li><a href="#">Eyeglass Photo Edit</a></li>
-                  <li><a href="#">Hat And Bag Photo Edit</a></li>
-                  <li><a href="#">Shoes Photo Edit</a></li>
-                </ul>
-              </li>
-              
-              <li class="item-for-sub nav-text-hover">
-                <a href="#">Neck Join</a>
-              </li>
-              
-              <li class="item-for-sub nav-text-hover has-child">
-                <a href="#">Fashion Retouch <span class="mobile-arrow">⌃</span></a>
-                <ul class="sub-submenu">
-                  <li><a href="#">Portrait Retouch</a></li>
-                  <li><a href="#">Headshot Retouch</a></li>
-                  <li><a href="#">Maternity Retouch</a></li>
-                  <li><a href="#">Wedding Retouch</a></li>
-                  <li><a href="#">Newborn Retouch</a></li>
-                </ul>
-              </li>
-
-              <li class="item-for-sub nav-text-hover">
-                <a href="#">Furniture Edit</a>
-              </li>
-
-              <li class="item-for-sub nav-text-hover has-child">
-                <a href="#">Shadow Making <span class="mobile-arrow">⌃</span></a>
-                <ul class="sub-submenu">
-                  <li><a href="#">Drop Shadow</a></li>
-                  <li><a href="#">Original Shadow</a></li>
-                  <li><a href="#">Reflection Shadow</a></li>
-                </ul>
-              </li>
-
-              <li class="item-for-sub nav-text-hover">
-                <a href="#">Real Estate Retouch</a>
-              </li>
-
-              <li class="item-for-sub nav-text-hover">
-                <a href="#">Car Photo Edit</a>
-              </li>
-
-            </ul>
-
-          </li>
-
-          <!-- drop down end-->
-
-
-          <li><a href="features.html">CLIPPING PATH</a></li>
-          <li><a href="pricing.html">JEWELRY RETOUCH</a></li>
-          <li><a href="pricing.html">IMAGE MASKING</a></li>
-          <li><a class="accent-link nav-left-right" href="login.html">FREE TRIAL</a></li>
-        </ul>
-      </nav>
-
-      <div id="overlay" onclick="closeSidebar()" aria-hidden="true"></div>
-      
-
-
-
-      <!-- =========================
-          BOTTOM BAR
-      ========================= -->
-      <div class="secondary-nav">
-
-        <ul class="bottom-bar">
-
-          <li class="item">
-            <span><i class="fa-solid fa-dollar-sign"></i></span>
-            <p>From $0.25 per image</p>
-          </li>
-          
-          <li class="item vertical-line remove-support">
-            <p></p>
-            <!-- <span><i class="fa-solid fa-shield-halved"></i></span>
-            <p>100% secure payment</p> -->
-            
-          </li>
-
-          <li class="item remove-support">
-            <span>❤</span>
-            <p>24/7 support</p>
-          </li>
-
-          <li class="item vertical-line remove-turnaround">
-            <p></p>
-            <!-- <span><i class="fa-solid fa-shield-halved"></i></span>
-            <p>100% secure payment</p> -->
-            
-          </li>
-
-          <li class="item remove-turnaround">
-            <span>⏱</span>
-            <p>Turnaround from 6 hours</p>
-          </li>
-
-          <li class="item vertical-line remove-trustpolot">
-            <p></p>
-            <!-- <span><i class="fa-solid fa-shield-halved"></i></span>
-            <p>100% secure payment</p> -->
-            
-          </li>
-
-          <li class="item remove-trustpolot">
-            <p>Excellent 4.8 out of 5 <span class="star">★</span> Trustpilot</p>
-          </li>
-
-          <li class="item vertical-line remove-qualityguaranteed">
-            <p></p>
-            <!-- <span><i class="fa-solid fa-shield-halved"></i></span>
-            <p>100% secure payment</p> -->
-            
-          </li>
-
-          <li class="item remove-qualityguaranteed">
-            <span class="verify-button"> <img src="assets\verify.svg" alt=""> </span>
-            <p>Quality guaranteed</p>
-          </li>
-
-        </ul>
-
-      </div>
-
-    </header>
-
-
-
-    <!-- =========================
+<!-- =========================
         HERO SECTION
     ========================= -->
     <main>
@@ -235,11 +64,11 @@
             <div class="buttons">
 
               <a href="#" class="btn primary">
-                Get my image edits →
+                Get my image edits &rarr;
               </a>
 
               <a href="#" class="btn secondary">
-                Get 2 free edits →
+                Get 2 free edits &rarr;
               </a>
 
             </div>
@@ -274,9 +103,9 @@
       <!-- =========================
         section 2
       ========================= -->
-      <section class="hero-section">
+      <section class="hero-section" aria-labelledby="company-title">
         <div class="hero-content">
-            <h2>Best Clipping Path Company</h2>
+            <h2 id="company-title">Best Clipping Path Company</h2>
 
             <p>
                 Need perfect photos for your business or personal use? 
@@ -304,73 +133,73 @@
       <!-- =========================
         section 3
       ========================= -->
-      <section class="hero-section-3">
+      <section class="hero-section-3" aria-labelledby="services-title">
         <div class="child-hero-content-3-1">
-          <h2>Clipping Path Services</h2>
+          <h2 id="services-title">Clipping Path Services</h2>
           <div class="child-hero-content-3-2">
-            <div class="card">
-              <img src="images\original\clothing-photo-editing-service.webp" alt="">
+            <article class="card">
+              <img src="images/original/clothing-photo-editing-service.webp" alt="Clothing photo editing example">
               <h3>clipping path service</h3>
               <p>
                 We are the most reliable <strong>Clipping Path Service</strong> provider in the industry. Our skilled team of graphic designers work hard to provide you with top-quality clipping path services. We pay attention to every detail. We offer great solutions for photographers, graphic designers and ecommerce owners.We can finish your orders quickly and keep high quality. This way, you can deliver important projects to your clients on time. We have different pricing options. This helps us meet your needs and give you the best value for your money.As for your images you have no need to worry as we have measures to keep your privacy and sensitive information safe.
               </p>
-            </div>
-            <div class="card">
-              <img src="images\original\furniture-photo-editing-service.webp" alt="">
+            </article>
+            <article class="card">
+              <img src="images/original/furniture-photo-editing-service.webp" alt="Furniture photo editing example">
               <h3>Complex Clipping Path</h3>
               <p>
                 High-quality image editing relies on complex clipping path services to achieve precise, professional results. Complex clipping paths are different from basic ones. They serve more detailed tasks. This includes isolating hair, fur, or transparent objects.Using complex clipping path services can really improve the look of your images. If you have an online store, you want to display your products clearly. If you are a photographer, you need good edits. These services can help you with both. They pay close attention to detail, making your images stand out.It makes your visuals look better.
               </p>
-            </div>
-            <div class="card">
-              <img src="images\original\Cutout-On-White.webp" alt="">
+            </article>
+            <article class="card">
+              <img src="images/original/Cutout-On-White.webp" alt="Product cutout on white background example">
               <h3>e-commerce Photo Editing</h3>
               <p>
                 We are ready to change the product photos to fit your needs. We offer many services. These include cutout on white, background removal, color correction, image resizing, and creating artificial shadows. We can add different effects to the images and fix any flaws. This will improve the look and appeal of your products to potential buyers.Our service includes: - Photoshop Clipping Path - Background Removal - Photo Retouching - Color Correction - Image Resize and Crop - Shadows and Reflections - Image Enhancement - Customized EditsFor questions, doubts, and ideas, we prefer phone or email.
               </p>
-            </div>
-            <div class="card">
-              <img src="images\original\Vehicles-Clipping-Path-shadowing-300x169.webp" alt="">
+            </article>
+            <article class="card">
+              <img src="images/original/Vehicles-Clipping-Path-shadowing-300x169.webp" alt="Vehicle shadow editing example">
               <h3>Image Shadowing</h3>
               <p>
                 We provide professional shadow making in Photoshop. This helps create beautiful and realistic shadows for your product photos. You know how important it is to focus on the visual presentation of your products. If you need natural shadows, drop shadows, reflection shadows, or a mix of these, we can help you.Improve Your Product Photographs Today! To attract customers and encourage them to buy your product, our Photoshop shadow service can help. We can help you create shadows. This service is for E-commerce retailers, professional photographers, and graphic design agencies.There are three types of shadow making services. Original shadowing, natural shadowing, and drop shadow making service. We can make it upon client demands. Let me know which type you're referring to or if it's something different! If you have any sample to follow it will be helpful for our shadow making experts.
               </p>
-            </div>
-            <div class="card">
-              <img src="images\original\Jewelry-Photo-Enhance-300x169.webp" alt="">
+            </article>
+            <article class="card">
+              <img src="images/original/Jewelry-Photo-Enhance-300x169.webp" alt="Jewelry retouching example">
               <h3>Jewelry Retouching</h3>
               <p>
-                Are you a jewelry business owner, designer, or photographer looking for the best way to showcase your beautiful pieces? Our Jewelry Photo Retouching Service stands out as one of the premier options available in the market today. We specialize in enhancing the visual appeal of jewelry images, ensuring that every piece shines with its true brilliance.The jewelry retouching process is careful and detailed. It needs a sharp eye for detail and a good understanding of the materials. We focus on cleaning, scratch removal, and polishing.We remove bad reflections and edit the digital images. We correct contrast and brightness as need. We eliminate backgrounds from the jewelry. Finally, we create shadows and add finishing touches.Choose us and make your images sparkling with the help of our Jewelry Photo Retouching Service. Feel free to contact us to know more details and get the amazing result you’ve been looking for!
+                Are you a jewelry business owner, designer, or photographer looking for the best way to showcase your beautiful pieces? Our Jewelry Photo Retouching Service stands out as one of the premier options available in the market today. We specialize in enhancing the visual appeal of jewelry images, ensuring that every piece shines with its true brilliance.The jewelry retouching process is careful and detailed. It needs a sharp eye for detail and a good understanding of the materials. We focus on cleaning, scratch removal, and polishing.We remove bad reflections and edit the digital images. We correct contrast and brightness as need. We eliminate backgrounds from the jewelry. Finally, we create shadows and add finishing touches.Choose us and make your images sparkling with the help of our Jewelry Photo Retouching Service. Feel free to contact us to know more details and get the amazing result you've been looking for!
               </p>
-            </div>
-            <div class="card">
-              <img src="images\original\Color-Correction-Service-300x180.webp" alt="">
+            </article>
+            <article class="card">
+              <img src="images/original/Color-Correction-Service-300x180.webp" alt="Color correction example">
               <h3>Color Correction</h3>
               <p>
                 Welcome to our Photoshop Color Correction service. We are here to turn your photos into beautiful works of art. Color correction is not just about making your images look good; it's about conveying the right mood and emotion. The colors in a photograph can significantly influence how viewers perceive the subject matter. We understand the nuances of color theory and the impact it has on visual storytelling. We want to ensure that the final product not only meets your expectations but exceeds them. We stay updated with industry trends to provide you with the best service possible. We understand that every project is unique. That's why we take the time to listen to your specific requirements and tailor our services to meet your vision. Get a quote today from Clipping Path AI to learn about how we can help with your color correction today. The minimum price that we offer for color correction service is $0.39 per Image.
               </p>
-            </div>
-            <div class="card">
-              <img src="images\original\neck-joint-300x237.webp" alt="">
+            </article>
+            <article class="card">
+              <img src="images/original/neck-joint-300x237.webp" alt="Neck joint editing example">
               <h3>Neck Join</h3>
               <p>
                 Are you currently involved in the clothing manufacturing or retail industry? Creating high-quality, attention-grabbing products is crucial for success in today's competitive market.Our high-quality neck join services enhance your clothing line's visual appeal and craftsmanship for a lasting customer impression. Allow us to present our Guaranteed Ghost Mannequin Service tailored to meet all your clothing photography needs. Our Ghost Mannequin Service encompasses various types of apparel, such as:- Tops, Shirts, and Blouses- Trousers, Jeans, and Pants- Dresses, Skirts, and Gowns- Coats, Jackets, and Outerwear- Swimwear and Shorts- Lingerie and Undergarments- Hosiery and Socks- Sportswear and ActivewearGet in touch with us today to discuss your needs, and let us elevate your clothing line in ways you never imagined!
               </p>
-            </div>
-            <div class="card">
-              <img src="images\original\hair-masking-service-300x169.webp" alt="">
+            </article>
+            <article class="card">
+              <img src="images/original/hair-masking-service-300x169.webp" alt="Image masking example">
               <h3>Image Masking</h3>
               <p>
                 Image masking is the art of removing backgrounds from an image. Clipping mask on Photoshop creates a clean look that appears natural and untouched.Whether you have straight European hair or curly hair, our specialists use the latest technology. We mask individual hair strands and other details. This makes our cutouts blend perfectly into any background.The Image Masking service is perfect for anyone who needs photo editing. This includes selling products online or for publication.We provide high-quality work. We also understand that you have limited time and money. To ensure complete customer satisfaction, We offer free alterations until your project reaches perfection.Do you want to increase product image appeal and make the pictures look more attractive to a potential buyer? Please try us for free of cost.
               </p>
-            </div>
-            <div class="card">
-              <img src="images\original\Headshot-retouch-300x180.webp" alt="">
+            </article>
+            <article class="card">
+              <img src="images/original/Headshot-retouch-300x180.webp" alt="Portrait retouching example">
               <h3>Portrait Retouching</h3>
               <p>
                 We transform your pictures into unique pieces of art! We are a team of professional Graphic designers work on digital face adjustments for portraits. We also enhance eyes and teeth. Skin retouching, body shaping, fabric retouching, hair retouching, background adjustments, color enhancement are the major parts of fashion retouching services.Hair cloning is another important task. They clean backgrounds and apply creative color grading. Finally, they add any necessary facial makeup.No matter your purpose, whether for business, memories, or social media, we dedicate ourselves to improving your photos. We can change boring images into artistic masterpieces that you would want to display at home.To get a quote, check the price list. You can also contact us now. Join our clients and enjoy the Portrait Retouching service!
               </p>
-            </div>
+            </article>
           </div>
 
           <!-- ORDER NOW AND FREE TRIAL BUTTONS -->
@@ -378,10 +207,6 @@
 
             <a href="#" class="btn primary order-now-btn">
               Order Now
-            </a>
-
-            <a href="#" class="ordernowbtn-contentnone">
-              
             </a>
 
             <a href="#" class="btn secondary free-trial-btn">
@@ -396,12 +221,12 @@
       <!-- =========================
         SECTION 4 - FAQ
       ========================= -->
-      <section class="faq-section">
+      <section class="faq-section" aria-labelledby="faq-title">
 
         <div class="faq-container">
 
           <!-- TITLE -->
-          <h2>Frequently Asked Questions</h2>
+          <h2 id="faq-title">Frequently Asked Questions</h2>
 
           <!-- FAQ GRID -->
           <div class="faq-grid">
@@ -409,42 +234,42 @@
             <!-- LEFT COLUMN -->
             <div class="faq-column">
 
-              <div class="faq-item">
+              <article class="faq-item">
                 <h3>What is clipping path service?</h3>
 
                 <p>
-                  Clipping path service is an editing technique used to separate an object from a picture. It helps improve the image by removing unwanted items and backgrounds. It’s also used to add graphics, adjust colors, and create transparent backgrounds. Clipping path is commonly used in photo retouching, color correction, background removal, and shadow creation.
+                  Clipping path service is an editing technique used to separate an object from a picture. It helps improve the image by removing unwanted items and backgrounds. It's also used to add graphics, adjust colors, and create transparent backgrounds. Clipping path is commonly used in photo retouching, color correction, background removal, and shadow creation.
                 </p>
-              </div>
+              </article>
 
-              <div class="faq-item">
+              <article class="faq-item">
                 <h3>What is clipping path service?</h3>
 
                 <p>
-                  Clipping path service is an editing technique used to separate an object from a picture. It helps improve the image by removing unwanted items and backgrounds. It’s also used to add graphics, adjust colors, and create transparent backgrounds. Clipping path is commonly used in photo retouching, color correction, background removal, and shadow creation.
+                  Clipping path service is an editing technique used to separate an object from a picture. It helps improve the image by removing unwanted items and backgrounds. It's also used to add graphics, adjust colors, and create transparent backgrounds. Clipping path is commonly used in photo retouching, color correction, background removal, and shadow creation.
                 </p>
-              </div>
+              </article>
 
             </div>
 
             <!-- RIGHT COLUMN -->
             <div class="faq-column">
 
-              <div class="faq-item">
+              <article class="faq-item">
                 <h3>Which is the best tool to use for clipping path work?</h3>
 
                 <p>
-                  Photoshop has many tools, such as Quick Mask, Magic Wand, Magnetic Lasso, and Pen Tools. The tool you choose depends on your skill level. The Pen Tool is most commonly used for Clipping Path services. It’s especially useful for removing backgrounds, as it creates a path around the image.
+                  Photoshop has many tools, such as Quick Mask, Magic Wand, Magnetic Lasso, and Pen Tools. The tool you choose depends on your skill level. The Pen Tool is most commonly used for Clipping Path services. It's especially useful for removing backgrounds, as it creates a path around the image.
                 </p>
-              </div>
+              </article>
 
-                <div class="faq-item">
+                <article class="faq-item">
                   <h3>What is a Photoshop clipping mask?</h3>
 
                   <p>
                     Clipping masks in Photoshop are a great way to control what parts of a layer are visible. While they might seem similar to layer masks, they work differently. A layer mask uses black and white to hide or show parts of the layer, while a clipping mask uses the content and transparency of one layer to control the visibility of another.
                   </p>
-                </div>
+                </article>
 
             </div>
 
@@ -457,95 +282,91 @@
       <!-- =========================
         SECTION 5 - WHY CHOOSE US
       ========================= -->
-      <section class="choose-section">
+      <section class="choose-section" aria-labelledby="choose-title">
 
         <div class="choose-container">
 
           <!-- TITLE -->
-          <h2>Why Choose us</h2>
+          <h2 id="choose-title">Why Choose us</h2>
 
           <!-- GRID -->
           <div class="choose-grid">
 
             <!-- ITEM 1 -->
-            <div class="choose-item">
+            <article class="choose-item">
               <h3>Transparent Pricing</h3>
 
               <p>
                 Pricing: Our pricing is clear. This makes it easy for customers to see costs. Customers with a framework contract pay a set fee per picture.
               </p>
-            </div>
+            </article>
 
             <!-- ITEM 2 -->
-            <div class="choose-item">
+            <article class="choose-item">
               <h3>Reasonable Price</h3>
 
               <p>
                 We can offer low price for our services. This helps clients afford what we provide. You can pay later after we complete the work properly.
               </p>
-            </div>
+            </article>
 
             <!-- ITEM 3 -->
-            <div class="choose-item">
+            <article class="choose-item">
               <h3>Manually Hand-Drawn</h3>
 
               <p>
                 Our skilled designers carefully retouch images using pen tools and tablets. They aim for perfect and natural-looking edges without AI tools.
               </p>
-            </div>
+            </article>
 
             <!-- ITEM 4 -->
-            <div class="choose-item">
+            <article class="choose-item">
               <h3>24 hours customer support</h3>
 
               <p>
                 Our customer support team is around you for 24 hours. You can ask any question related to the job any time of the day.
               </p>
-            </div>
+            </article>
 
             <!-- ITEM 5 -->
-            <div class="choose-item">
+            <article class="choose-item">
               <h3>Monthly Invoice Schedule</h3>
 
               <p>
                 We accept order to order payment, weekly payment and monthly payment. You can pay us through any payment methods.
               </p>
-            </div>
+            </article>
 
             <!-- ITEM 6 -->
-            <div class="choose-item">
+            <article class="choose-item">
               <h3>Fast Turnaround Time</h3>
 
               <p>
-                Our <strong>clipping path company</strong> ensures that we complete all our clients’ work on time. If we cannot meet the deadline, we offer rush services for an extra fee.
+                Our <strong>clipping path company</strong> ensures that we complete all our clients' work on time. If we cannot meet the deadline, we offer rush services for an extra fee.
               </p>
-            </div>
+            </article>
 
             <!-- ITEM 7 -->
-            <div class="choose-item">
+            <article class="choose-item">
               <h3>Dedicated QC team</h3>
 
               <p>
                 For each service, we have a separate QC team of editing experts. They divide the work for accurate photo editing and clipping path services.
               </p>
-            </div>
+            </article>
 
             <!-- ITEM 8 -->
-            <div class="choose-item">
+            <article class="choose-item">
               <h3>Data Privacy</h3>
 
               <p>
-                We Promise to keep your Images safe and private. We limit how to use profile images in our work. This helps maintain your trust in our company’s promise to keep things confidential.
+                We Promise to keep your Images safe and private. We limit how to use profile images in our work. This helps maintain your trust in our company's promise to keep things confidential.
               </p>
-            </div>
+            </article>
 
           </div>
           <!-- ORDER NOW AND FREE TRIAL BUTTONS -->
           <div class="buttons ordernowfreetrial">
-
-            <a href="#" class="ordernowbtn-contentnone">
-              
-            </a>
 
             <a href="#" class="btn primary order-now-btn">
               Order Now
@@ -555,10 +376,6 @@
               Free Trial
             </a>
 
-            <a href="#" class="ordernowbtn-contentnone">
-              
-            </a>
-
           </div>
 
         </div>
@@ -566,171 +383,8 @@
       </section>
 
     </main>
+    <div data-site-footer></div>
 
-
-
-
-    <!-- =========================
-   FOOTER
-    ========================= -->
-    <footer class="footer">
-
-      <!-- TOP FEATURE BAR -->
-      <div class="footer-top">
-
-        <div class="footer-top-item">
-          <i class="fa-solid fa-star"></i>
-          <span>Experienced Team</span>
-        </div>
-
-        <div class="footer-top-item">
-          <i class="fa-solid fa-star"></i>
-          <span>Quality Assurance</span>
-        </div>
-
-        <div class="footer-top-item">
-          <i class="fa-solid fa-star"></i>
-          <span>Fast Turnaround</span>
-        </div>
-
-        <div class="footer-top-item">
-          <i class="fa-solid fa-star"></i>
-          <span>Lower Pricing</span>
-        </div>
-
-        <div class="footer-top-item">
-          <i class="fa-solid fa-star"></i>
-          <span>Hire Virtual Assistants</span>
-        </div>
-
-      </div>
-
-
-      <!-- MAIN FOOTER -->
-      <div class="footer-container">
-
-        <!-- LEFT -->
-        <div class="footer-box footer-about">
-
-          <a href="#" class="footer-logo">
-            <img src="images\logo_house.svg" alt="Logo HOuse Logo">
-          </a>
-
-          <address>
-            <strong>Address:</strong><br>
-            20227, Saticoy Street, Winnetka,<br>
-            California 91306
-          </address>
-
-        </div>
-
-
-        <!-- CENTER -->
-        <div class="footer-box footer-text">
-
-          <p>
-            <strong>Logo House</strong> is for quick delivery time,
-            dedicated support team and more.
-            The first 3 images are free.
-          </p>
-
-          <p>
-            You can send us your images through
-            WeTransfer or Dropbox.
-          </p>
-
-        </div>
-
-
-        <!-- UPLOAD BOX -->
-        <div class="footer-box upload-box">
-
-          <h3>Easy Upload</h3>
-
-          <div class="upload-icons">
-
-            <a href="#" aria-label="WeTransfer">
-              <img src="images\original\WeTransfer_logo.svg" alt="WeTransfer">
-            </a>
-
-            <a href="#" aria-label="Google Drive">
-              <img src="images\original\Google_Drive_icon_(2026).svg" alt="Google Drive">
-            </a>
-
-            <a href="#" aria-label="Dropbox">
-              <img src="images\original\Dropbox_logo_2017.svg" alt="Dropbox">
-            </a>
-
-            <a href="#" aria-label="FTP">
-              <img src="images\original\filezilla-icon.webp" alt="FTP">
-            </a>
-
-          </div>
-
-        </div>
-
-
-        <!-- RIGHT -->
-        <div class="footer-box footer-links">
-
-          <h3>Services</h3>
-
-          <ul>
-
-            <li><a href="#">Clipping Path</a></li>
-
-            <li><a href="#">Image Masking</a></li>
-
-            <li><a href="#">Shadows & Highlights</a></li>
-
-            <li><a href="#">Jewelry Retouch</a></li>
-
-            <li><a href="#">Portrait Retouching</a></li>
-
-            <li><a href="#">Color Correction Service</a></li>
-
-          </ul>
-
-        </div>
-
-      </div>
-
-
-      <!-- SOCIAL ICONS -->
-      <div class="footer-social">
-
-        <a href="#" aria-label="Facebook">
-          <i class="fa-brands fa-facebook"></i>
-        </a>
-
-        <a href="#" aria-label="Pinterest">
-          <i class="fa-brands fa-pinterest-p"></i>
-        </a>
-
-        <a href="#" aria-label="LinkedIn">
-          <i class="fa-brands fa-linkedin"></i>
-        </a>
-
-        <a href="#" aria-label="Instagram">
-          <i class="fa-brands fa-instagram"></i>
-        </a>
-
-        <a href="#" aria-label="YouTube">
-          <i class="fa-brands fa-youtube"></i>
-        </a>
-
-        <a href="#" aria-label="RSS">
-          <i class="fa-solid fa-rss"></i>
-        </a>
-
-        <a href="#" aria-label="Tumblr">
-          <i class="fa-brands fa-tumblr"></i>
-        </a>
-
-      </div>
-
-    </footer>
-
-    
-  </body>
+    </body>
 </html>
+

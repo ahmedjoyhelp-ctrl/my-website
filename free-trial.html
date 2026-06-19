@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free Trial | Logo House</title>
+    <meta name="description" content="Upload up to two images for a free Logo House trial edit.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Livvic:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="js/layout.js" defer></script>
+    <script src="js/script.js" defer></script>
+  </head>
+  <body>
+    <div data-site-header></div>
+    <main>
+      <section class="free-trial-section" aria-labelledby="free-trial-title">
+        <div class="free-trial-container">
+          <div class="free-trial-header">
+            <h1 id="free-trial-title">Free Trial</h1>
+            <p>Upload up to 2 images and tell us which editing service and return file type you need. For more than 2 images, please request pricing before sending the full order.</p>
+          </div>
+
+          <form class="free-trial-form" action="#" method="post" enctype="multipart/form-data">
+            <div class="form-field">
+              <label for="client-name">Name</label>
+              <input id="client-name" name="client-name" type="text" autocomplete="name" required>
+            </div>
+
+            <div class="form-field">
+              <label for="client-email">Email</label>
+              <input id="client-email" name="client-email" type="email" autocomplete="email" required>
+            </div>
+
+            <fieldset class="form-group">
+              <legend>Image editing option</legend>
+              <div class="option-grid">
+                <label><input type="checkbox" name="editing-option" value="clipping-path"> Clipping Path</label>
+                <label><input type="checkbox" name="editing-option" value="image-masking"> Image Masking</label>
+                <label><input type="checkbox" name="editing-option" value="jewelry-retouch"> Jewelry Retouch</label>
+                <label><input type="checkbox" name="editing-option" value="shadow-making"> Shadow Making</label>
+                <label><input type="checkbox" name="editing-option" value="color-correction"> Color Correction</label>
+                <label><input type="checkbox" name="editing-option" value="retouching"> Retouching</label>
+              </div>
+            </fieldset>
+
+            <div class="form-field">
+              <label for="return-file">Return file needed</label>
+              <select id="return-file" name="return-file" required>
+                <option value="">Select format</option>
+                <option value="jpg">JPG</option>
+                <option value="png">PNG</option>
+                <option value="psd">PSD</option>
+                <option value="tiff">TIFF</option>
+                <option value="ai">AI</option>
+                <option value="pdf">PDF</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="turnaround">Turnaround needed</label>
+              <select id="turnaround" name="turnaround">
+                <option value="standard">Standard</option>
+                <option value="6-hours">6 hours</option>
+                <option value="12-hours">12 hours</option>
+                <option value="24-hours">24 hours</option>
+              </select>
+            </div>
+
+            <div class="form-field form-field-full">
+              <label for="trial-upload">Upload images</label>
+              <input id="trial-upload" name="trial-upload" type="file" accept="image/*,.psd,.ai,.pdf,.zip" multiple required>
+              <p class="upload-help">Maximum 2 files for the free trial. Accepted examples: JPG, PNG, PSD, AI, PDF, ZIP.</p>
+              <p class="file-count" id="file-count" aria-live="polite">No files selected</p>
+            </div>
+
+            <div class="form-field form-field-full">
+              <label for="project-notes">Instructions</label>
+              <textarea id="project-notes" name="project-notes" placeholder="Tell us what should be edited and what final result you need."></textarea>
+            </div>
+
+            <div class="form-field-full">
+              <label class="price-first-check">
+                <input type="checkbox" name="need-price-first" value="yes">
+                I need a price first before sending more than 2 images.
+              </label>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn primary" type="submit">Send Free Trial</button>
+              <p class="form-message" id="form-message" aria-live="polite"></p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+    <div data-site-footer></div>
+  </body>
+</html>
