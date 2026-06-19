@@ -152,6 +152,7 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
     const nextButton = carousel.querySelector('[data-carousel-next]');
     let activeIndex = 0;
     let timerId;
+    let zoomResetId;
 
     if (!images.length) return;
 
@@ -180,6 +181,11 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
         startCarousel();
     }
 
+    frame?.addEventListener('mouseenter', () => {
+        window.clearInterval(timerId);
+        window.clearTimeout(zoomResetId);
+    });
+
     frame?.addEventListener('mousemove', (event) => {
         const activeImage = images[activeIndex];
         const frameRect = frame.getBoundingClientRect();
@@ -191,8 +197,15 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
     });
 
     frame?.addEventListener('mouseleave', () => {
-        images[activeIndex].style.setProperty('--zoom-x', '50%');
-        images[activeIndex].style.setProperty('--zoom-y', '50%');
+        const activeImage = images[activeIndex];
+
+        window.clearTimeout(zoomResetId);
+        zoomResetId = window.setTimeout(() => {
+            activeImage.style.setProperty('--zoom-x', '50%');
+            activeImage.style.setProperty('--zoom-y', '50%');
+        }, 300);
+
+        restartCarousel();
     });
 
     previousButton?.addEventListener('click', () => {

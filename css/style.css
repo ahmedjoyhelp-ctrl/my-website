@@ -1658,7 +1658,7 @@ nav a.accent-link:hover {
   pointer-events: none;
   transform: scale(1);
   transform-origin: var(--zoom-x) var(--zoom-y);
-  transition: opacity 450ms ease, transform 280ms ease;
+  transition: opacity 450ms ease, transform 320ms ease;
 }
 
 .clipping-carousel-image.is-active {
