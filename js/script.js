@@ -147,6 +147,7 @@ if (trialUpload) {
 document.querySelectorAll('[data-carousel]').forEach((carousel) => {
     const images = Array.from(carousel.querySelectorAll('.clipping-carousel-image'));
     const dots = Array.from(carousel.querySelectorAll('[data-carousel-dot]'));
+    const frame = carousel.querySelector('.clipping-carousel-frame');
     const previousButton = carousel.querySelector('[data-carousel-prev]');
     const nextButton = carousel.querySelector('[data-carousel-next]');
     let activeIndex = 0;
@@ -178,6 +179,21 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
         window.clearInterval(timerId);
         startCarousel();
     }
+
+    frame?.addEventListener('mousemove', (event) => {
+        const activeImage = images[activeIndex];
+        const frameRect = frame.getBoundingClientRect();
+        const x = ((event.clientX - frameRect.left) / frameRect.width) * 100;
+        const y = ((event.clientY - frameRect.top) / frameRect.height) * 100;
+
+        activeImage.style.setProperty('--zoom-x', `${x}%`);
+        activeImage.style.setProperty('--zoom-y', `${y}%`);
+    });
+
+    frame?.addEventListener('mouseleave', () => {
+        images[activeIndex].style.setProperty('--zoom-x', '50%');
+        images[activeIndex].style.setProperty('--zoom-y', '50%');
+    });
 
     previousButton?.addEventListener('click', () => {
         showSlide(activeIndex - 1);
