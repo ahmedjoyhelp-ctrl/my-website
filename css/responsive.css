@@ -68,8 +68,21 @@
         text-align: center;
     }
 
+    .clipping-service-overview-container {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .clipping-service-overview-content {
+        margin: auto;
+    }
+
     .clipping-showcase-content {
         margin: auto;
+    }
+
+    .clipping-project-stage {
+        max-width: 720px;
     }
 
 }
@@ -514,8 +527,47 @@ nav a.accent-link {
         padding: 55px 20px;
     }
 
+    .clipping-service-overview-section {
+        padding: 55px 20px;
+    }
+
+    .clipping-service-overview-container {
+        gap: 40px;
+    }
+
     .clipping-showcase-container {
         gap: 40px;
+    }
+
+    .clipping-projects-section {
+        padding: 55px 16px 65px;
+    }
+
+    .clipping-projects-container h2 {
+        margin-bottom: 34px;
+    }
+
+    .clipping-project-stage {
+        max-width: 520px;
+    }
+
+    .clipping-project-thumb {
+        width: 64px;
+        height: 50px;
+    }
+
+    .clipping-project-arrow {
+        width: 40px;
+        height: 40px;
+        font-size: 30px;
+    }
+
+    .clipping-project-prev {
+        left: 10px;
+    }
+
+    .clipping-project-next {
+        right: 10px;
     }
 
 }

@@ -1569,14 +1569,164 @@ nav a.accent-link:hover {
     display:block;
 }
 
-/* clipping path service showcase */
-.clipping-showcase-section {
+/* clipping path project gallery */
+.clipping-projects-section {
+  width: 100%;
+  padding: 70px 20px 80px;
+  background: #ffffff;
+}
+
+.clipping-projects-container {
+  max-width: 1180px;
+  margin: auto;
+}
+
+.clipping-projects-container h2 {
+  max-width: 940px;
+  margin: 0 auto 54px;
+  color: #2b1b9a;
+  font-size: clamp(2.1rem, 4.5vw, 3.1rem);
+  line-height: 1.05;
+  text-align: center;
+}
+
+.clipping-project-stage {
+  --project-zoom-x: 50%;
+  --project-zoom-y: 50%;
+  position: relative;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.clipping-project-pane {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  margin: 0;
+  overflow: hidden;
+  background: #f7f7f7;
+}
+
+.clipping-project-pane img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  transform: scale(1);
+  transform-origin: var(--project-zoom-x) var(--project-zoom-y);
+  transition: opacity 320ms ease, transform 520ms ease;
+}
+
+.clipping-project-pane.is-changing img {
+  opacity: 0;
+}
+
+.clipping-project-stage.is-zooming .clipping-project-pane img {
+  transform: scale(2);
+}
+
+.clipping-project-arrow {
+  position: absolute;
+  top: 50%;
+  z-index: 2;
+  width: 46px;
+  height: 46px;
+  border: 0;
+  border-radius: 50%;
+  background: rgba(43, 27, 154, 0.86);
+  color: #ffffff;
+  font-size: 34px;
+  line-height: 1;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-50%);
+  transition: opacity 220ms ease, visibility 220ms ease, background 220ms ease, transform 220ms ease;
+}
+
+.clipping-project-stage:hover .clipping-project-arrow,
+.clipping-project-stage:focus-within .clipping-project-arrow {
+  opacity: 1;
+  visibility: visible;
+}
+
+.clipping-project-arrow:hover {
+  background: #2b1b9a;
+  transform: translateY(-50%) scale(1.06);
+}
+
+.clipping-project-prev {
+  left: 16px;
+}
+
+.clipping-project-next {
+  right: 16px;
+}
+
+.clipping-project-thumbs {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  max-width: 720px;
+  margin: 22px auto 0;
+}
+
+.clipping-project-thumb {
+  width: 76px;
+  height: 58px;
+  padding: 3px;
+  border: 1px solid transparent;
+  background: #ffffff;
+  cursor: pointer;
+  transition: border-color 220ms ease, transform 220ms ease;
+}
+
+.clipping-project-thumb:hover {
+  transform: translateY(-2px);
+}
+
+.clipping-project-thumb.is-active {
+  border-color: #2f2f2f;
+}
+
+.clipping-project-thumb img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+}
+
+.clipping-project-cta {
+  width: fit-content;
+  margin: 34px auto 0;
+  padding: 14px 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border-radius: 6px;
+  background: linear-gradient(to right, #6ac3ff, #5a94ec);
+  color: #ffffff;
+  font: 700 13px var(--primary-font);
+  text-decoration: none;
+  box-shadow: 0 10px 20px rgba(90, 148, 236, 0.22);
+  transition: transform 220ms ease, box-shadow 220ms ease;
+}
+
+.clipping-project-cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 16px 28px rgba(90, 148, 236, 0.32);
+}
+
+/* clipping path service overview */
+.clipping-service-overview-section {
   width: 100%;
   padding: 80px 20px;
   background: #f7f5fb;
 }
 
-.clipping-showcase-container {
+.clipping-service-overview-container {
   max-width: 1280px;
   margin: auto;
   display: grid;
@@ -1585,25 +1735,25 @@ nav a.accent-link:hover {
   gap: 70px;
 }
 
-.clipping-showcase-content {
+.clipping-service-overview-content {
   max-width: 680px;
 }
 
-.clipping-showcase-content h2 {
+.clipping-service-overview-content h2 {
   color: #2b1b9a;
   font-size: clamp(2.2rem, calc(4vw + 1rem), 3.4rem);
   line-height: 1.1;
   margin-bottom: 16px;
 }
 
-.clipping-showcase-subtitle {
+.clipping-service-overview-subtitle {
   color: #2b1b9a;
   font-size: clamp(1.2rem, 2vw, 1.55rem);
   line-height: 1.35;
   margin-bottom: 14px;
 }
 
-.clipping-showcase-text {
+.clipping-service-overview-text {
   color: rgba(43, 27, 154, 0.68);
   font-size: 16px;
   line-height: 1.7;
@@ -1611,20 +1761,110 @@ nav a.accent-link:hover {
   margin-bottom: 16px;
 }
 
-.clipping-showcase-price {
+.clipping-service-overview-price {
   color: rgba(43, 27, 154, 0.68);
   font-size: 16px;
   margin-bottom: 36px;
 }
 
-.clipping-showcase-price strong {
+.clipping-service-overview-price strong {
   color: #2b1b9a;
   font-size: 25px;
 }
 
-.clipping-showcase-btn {
+.clipping-service-overview-btn {
   min-width: 210px;
   text-align: center;
+}
+
+/* clipping path service showcase */
+.clipping-showcase-section {
+  width: 100%;
+  padding: 90px 20px;
+  background: #ffffff;
+}
+
+.clipping-showcase-container {
+  max-width: 1280px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: minmax(320px, 0.8fr) minmax(0, 1.2fr);
+  align-items: center;
+  gap: 90px;
+}
+
+.clipping-showcase-art {
+  position: relative;
+  min-height: 380px;
+}
+
+.clipping-showcase-blob {
+  position: relative;
+  z-index: 2;
+  width: 292px;
+  height: 292px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #f6f2fb;
+}
+
+.clipping-showcase-blob img {
+  width: 88%;
+  height: 88%;
+  object-fit: contain;
+  transform: rotate(-18deg);
+}
+
+.clipping-showcase-loop {
+  position: absolute;
+  left: 72px;
+  bottom: 28px;
+  width: 320px;
+  height: 142px;
+  border: 13px solid #2b1b9a;
+  border-left-color: #9184f0;
+  border-bottom-color: #9184f0;
+  border-radius: 80px 115px 96px 86px;
+  transform: rotate(-18deg);
+}
+
+.clipping-showcase-loop::before {
+  content: "";
+  position: absolute;
+  left: -48px;
+  bottom: -48px;
+  width: 145px;
+  height: 110px;
+  border: 13px solid #9184f0;
+  border-top: 0;
+  border-radius: 0 0 90px 90px;
+  transform: rotate(-36deg);
+}
+
+.clipping-showcase-content {
+  max-width: 780px;
+}
+
+.clipping-showcase-content h2 {
+  color: #2b1b9a;
+  font-size: clamp(2rem, 3vw, 2.25rem);
+  line-height: 1.08;
+  margin-bottom: 22px;
+}
+
+.clipping-showcase-text {
+  color: rgba(43, 27, 154, 0.66);
+  font-size: 16px;
+  line-height: 1.62;
+  max-width: 760px;
+  margin-bottom: 24px;
+}
+
+.clipping-showcase-text strong {
+  color: #2b1b9a;
+  font-weight: 800;
 }
 
 .clipping-carousel {

@@ -143,6 +143,131 @@ if (trialUpload) {
     });
 }
 
+// CLIPPING PATH PROJECT GALLERY
+document.querySelectorAll('[data-project-gallery]').forEach((gallery) => {
+    const projectImage = gallery.querySelector('[data-project-image]');
+    const stage = gallery.querySelector('[data-project-stage]');
+    const pane = gallery.querySelector('.clipping-project-pane');
+    const thumbs = Array.from(gallery.querySelectorAll('[data-project-thumb]'));
+    const previousButton = gallery.querySelector('[data-project-prev]');
+    const nextButton = gallery.querySelector('[data-project-next]');
+    const projects = [
+        {
+            image: 'images/original/basic-clipping-path.webp',
+            alt: 'Basic clipping path product project'
+        },
+        {
+            image: 'images/original/Cutout-On-White.webp',
+            alt: 'Cutout product on white background project'
+        },
+        {
+            image: 'images/original/furniture-photo-editing-service.webp',
+            alt: 'Furniture clipping path project'
+        },
+        {
+            image: 'images/original/clothing-photo-editing-service.webp',
+            alt: 'Clothing clipping path project'
+        },
+        {
+            image: 'images/original/Jewelry-Photo-Enhance-300x169.webp',
+            alt: 'Jewelry clipping path project'
+        },
+        {
+            image: 'images/original/service-red copy.png',
+            alt: 'Red product clipping path project'
+        },
+        {
+            image: 'images/original/Vehicles-Clipping-Path-shadowing-300x169.webp',
+            alt: 'Vehicle clipping path project'
+        }
+    ];
+    let activeProject = 0;
+    let projectTimerId;
+    let isProjectHovering = false;
+    let zoomResetId;
+
+    if (!projectImage || !stage || !pane || !projects.length) return;
+
+    function setProject(index) {
+        activeProject = (index + projects.length) % projects.length;
+        const project = projects[activeProject];
+
+        pane.classList.add('is-changing');
+
+        window.setTimeout(() => {
+            projectImage.src = project.image;
+            projectImage.alt = project.alt;
+
+            pane.classList.remove('is-changing');
+        }, 160);
+
+        thumbs.forEach((thumb, thumbIndex) => {
+            const isActive = thumbIndex === activeProject;
+            thumb.classList.toggle('is-active', isActive);
+            thumb.setAttribute('aria-current', isActive ? 'true' : 'false');
+        });
+    }
+
+    function startProjectLoop() {
+        projectTimerId = window.setInterval(() => {
+            setProject(activeProject + 1);
+        }, 3000);
+    }
+
+    function restartProjectLoop() {
+        window.clearInterval(projectTimerId);
+        if (isProjectHovering) return;
+        startProjectLoop();
+    }
+
+    stage.addEventListener('mouseenter', () => {
+        isProjectHovering = true;
+        window.clearInterval(projectTimerId);
+        window.clearTimeout(zoomResetId);
+        stage.classList.add('is-zooming');
+    });
+
+    stage.addEventListener('mousemove', (event) => {
+        const stageRect = stage.getBoundingClientRect();
+        const x = ((event.clientX - stageRect.left) / stageRect.width) * 100;
+        const y = ((event.clientY - stageRect.top) / stageRect.height) * 100;
+
+        stage.style.setProperty('--project-zoom-x', `${x}%`);
+        stage.style.setProperty('--project-zoom-y', `${y}%`);
+    });
+
+    stage.addEventListener('mouseleave', () => {
+        isProjectHovering = false;
+        stage.classList.remove('is-zooming');
+        window.clearTimeout(zoomResetId);
+        zoomResetId = window.setTimeout(() => {
+            stage.style.setProperty('--project-zoom-x', '50%');
+            stage.style.setProperty('--project-zoom-y', '50%');
+        }, 520);
+        restartProjectLoop();
+    });
+
+    previousButton?.addEventListener('click', () => {
+        setProject(activeProject - 1);
+        restartProjectLoop();
+    });
+
+    nextButton?.addEventListener('click', () => {
+        setProject(activeProject + 1);
+        restartProjectLoop();
+    });
+
+    thumbs.forEach((thumb) => {
+        thumb.addEventListener('click', () => {
+            setProject(Number(thumb.dataset.projectThumb));
+            restartProjectLoop();
+        });
+    });
+
+    setProject(0);
+    startProjectLoop();
+});
+
 // CLIPPING PATH CAROUSEL
 document.querySelectorAll('[data-carousel]').forEach((carousel) => {
     const images = Array.from(carousel.querySelectorAll('.clipping-carousel-image'));
