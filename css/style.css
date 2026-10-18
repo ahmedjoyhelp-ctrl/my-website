@@ -1590,6 +1590,51 @@ nav a.accent-link:hover {
   text-align: center;
 }
 
+.forimage {
+  background-color: #f7f3fc;
+}
+
+.kghe {
+  max-width: 940px;
+  margin: 0 auto 20px;
+  color: #2b1b9a;
+  font-size: clamp(2.1rem, 4.5vw, 3.1rem);
+  line-height: 1.05;
+  text-align: center;
+}
+
+.lghf {
+  font-family: var(--secondary-font);
+  color: rgba(43, 27, 154, 0.66);
+  font-size: 16px;
+  line-height: 1.62;
+  max-width: 760px;
+  margin: 0 auto 24px;
+  text-align: center;
+}
+
+.hhlg {
+  display: inline-block;
+  max-width: 400px;
+  text-align: center;
+  color: #2b1b9a;
+  margin: 0 20px;
+}
+
+section.forimage img {
+  width: 130px;
+  height: 130px;
+  margin: 20px 0;
+}
+
+div.forgroup {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* justify-content: center; */
+  justify-items: center;
+  align-items: start;
+}
+
 .clipping-project-stage {
   --project-zoom-x: 50%;
   --project-zoom-y: 50%;
@@ -1605,6 +1650,7 @@ nav a.accent-link:hover {
   overflow: hidden;
   background: #f7f7f7;
 }
+
 
 .clipping-project-pane img {
   width: 100%;
@@ -1780,8 +1826,7 @@ nav a.accent-link:hover {
 /* clipping path service showcase */
 .clipping-showcase-section {
   width: 100%;
-  padding: 90px 20px;
-  background: #ffffff;
+  padding: 90px 180px;
 }
 
 .clipping-showcase-container {
@@ -1966,4 +2011,123 @@ nav a.accent-link:hover {
 
 .clipping-carousel-dot.is-active {
   background: #9a9a9a;
+}
+
+.one {
+  padding: 90px 80px;
+  display: inline-flex;
+  flex-direction: column;
+  max-width: 800px;
+  justify-content: center;
+  align-items: center;
+}
+
+.one h2 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.one img {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.two {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  justify-content: center;
+  justify-items: center;
+  align-items: start;
+}
+.three {
+  font-family: var(--secondary-font);
+  font-size: 24px;
+  color: rgba(44, 27, 154, 0.877);
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.four {
+  font-weight: bolder;
+}
+
+.five {
+  font-family: var(--secondary-font);
+  font-size: 16px;
+  color: rgba(44, 27, 154, 0.788);
+  line-height: 1.5;
+}
+
+.six {
+  color: #2b1b9a;
+  font-size: clamp(2.1rem, 4.5vw, 3.1rem);
+  line-height: 1.05;
+  text-align: left;
+  margin-bottom: 30px;
+}
+
+.seven {
+  display: flex;
+}
+
+.eight {
+  color:#ff0a0a;
+  background-color: #ffeeef;
+  height: 40px;
+  width: 40px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  border-radius: 50%;
+  text-align: center;
+  transform: translateY(-10%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  margin-right: 10px;
+}
+.eight-second {
+  color:#0ae2ff;
+  background-color: #dafaff;
+}
+.eight-third {
+  color:#0aff5c;
+  background-color: #dcffe8;
+}
+
+.nine {
+  max-width: 100%;
+  background-color: #f7f3fc;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  justify-content: center;
+  justify-items: center;
+  align-items: start;
+  align-content: start;
+}
+.ten {
+  color: #2c1b9aec;
+  font-size: clamp(1rem, 1.1vw, 3.1rem);
+  line-height: 1;
+  text-align: left;
+  margin-bottom: 5px;
+}
+.eleven {
+    color: #2c1b9aec;
+}
+.twelve {
+  margin-bottom: 40px;
+}
+
+.thirteen {
+  min-width: 0;
+  flex-shrink: 1;
+}
+
+.thirteen img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  min-width: 0;
 }
