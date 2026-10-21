@@ -353,3 +353,23 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
     showSlide(0);
     startCarousel();
 });
+
+
+
+
+
+
+
+
+
+const eighteen = document.querySelector(".eighteen");
+const box = document.querySelector(".fourteen");
+const plus = document.querySelector(".fifteen");
+
+plus.addEventListener("click", () => {
+  box.classList.toggle("active");
+  eighteen.classList.toggle("eighteen-active");
+});
+
+
+
