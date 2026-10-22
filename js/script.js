@@ -365,10 +365,19 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
 const eighteen = document.querySelector(".eighteen");
 const box = document.querySelector(".fourteen");
 const plus = document.querySelector(".fifteen");
+const plusPlus = document.querySelector(".fifteen-plus");
 
 plus.addEventListener("click", () => {
   box.classList.toggle("active");
   eighteen.classList.toggle("eighteen-active");
+  plusPlus.classList.toggle("fifteen-plus-pro");
+  plus.classList.toggle("fifteen-hidden");
+});
+plusPlus.addEventListener("click", () => {
+  box.classList.toggle("active");
+  eighteen.classList.toggle("eighteen-active");
+  plusPlus.classList.toggle("fifteen-plus-pro");
+  plus.classList.toggle("fifteen-hidden");
 });
 
 

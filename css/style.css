@@ -2165,6 +2165,30 @@ div.forgroup {
   border-radius: 50%;
   user-select: none;
 }
+.fifteen-hidden {
+  display: none;
+}
+.fifteen-plus {
+  display: none;
+}
+.fifteen-plus-pro {
+  cursor: pointer;
+  font-size: 50px;
+  box-sizing: border-box;
+  height: 60px;
+  width: 60px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  background-color: #2b1b9a;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  line-height: 1;
+  padding-bottom: 5px;
+  border-radius: 50%;
+  user-select: none;
+}
 .sixteen {
   display: flex;
   justify-content: center;
