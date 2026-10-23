@@ -2211,31 +2211,38 @@ div.forgroup {
   margin-bottom: 40px;
   color: #2b1b9a;
 }
-.twenty{
+.twenty {
   cursor: pointer;
   color: #2b1b9a;
   font-size: 28px;
   box-sizing: border-box;
-  box-sizing: border-box;
   flex-shrink: 0;
 }
 .twenty-one {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 30px;
+  align-items: start;
   background-color: #e5fbff;
   width: 100%;
   max-width: 1400px;
+  box-sizing: border-box;
   padding: 20px 50px;
+  margin-bottom: 40px;
   border-radius: 8px;
   color: #2b1b9a;
 }
 .twenty-two {
   padding: 20px 0;
+  margin: 0;
   line-height: 2.5;
   list-style: none;
 }
 
 .twenty-two li {
   position: relative;
-  padding: 0 40px;
+  padding-left: 35px;
+  overflow-wrap: anywhere;
 }
 
 .twenty-two li::before {
@@ -2247,4 +2254,28 @@ div.forgroup {
   top: 50%;
   transform: translateY(-50%);
   line-height: 1;
+}
+.twenty-three {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0;
+  width: 100%;
+  max-width: 640px;
+  min-width: 0;
+  box-sizing: border-box;
+  padding: clamp(8px, 3vw, 20px);
+  background-color: #f7f3fc;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.twenty-three img {
+  display: block;
+  width: 50%;
+  height: auto;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  flex: 0 0 50%;
+  min-width: 0;
 }

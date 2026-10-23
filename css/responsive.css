@@ -572,6 +572,19 @@ nav a.accent-link {
         right: 10px;
     }
 
+    .eighteen-active {
+        padding: 0 20px;
+    }
+
+    .twenty-one {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 20px;
+        gap: 20px;
+    }
+
+    .twenty {
+        font-size: 22px;
+    }
 }
 
 
