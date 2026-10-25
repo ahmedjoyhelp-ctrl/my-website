@@ -2251,8 +2251,7 @@ div.forgroup {
   font-size: 30px;
   position: absolute;
   left: 0;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 0;
   line-height: 1;
 }
 .twenty-three {
@@ -2278,4 +2277,128 @@ div.forgroup {
   object-fit: contain;
   flex: 0 0 50%;
   min-width: 0;
+}
+.twenty-four {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin: 20px 0;
+}
+.twenty-four img {
+  width: 100%;
+  max-width: 250px;
+  min-width: 0;
+}
+.twenty-five {
+  color: #ff0a0a;
+  background-color: #ffeeef;
+  width: 40px;
+  height: 40px;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: middle;
+  font-size: 16px;
+  margin-right: 10px;
+}
+.twenty-six {
+  margin-bottom: 20px;
+}
+.twenty-seven {
+  margin-bottom: 40px;
+  color: #2b1b9a;
+}
+.twenty-eight {
+  font-weight: 100;
+}
+.twenty-nine {
+  color: #2b1b9a;
+  font-size: 30px;
+  font-weight: 600;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  text-align: center;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 800px;
+  margin-inline: auto;
+  margin-bottom: 20px;
+}
+.thirty {
+  color: #2c1b9aa1;
+  font-size: 22px;
+  font-weight: 000;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  text-align: center;
+  line-height: 1.5;
+  width: 100%;
+  max-width: 850px;
+  margin-inline: auto;
+  margin-bottom: 20px;
+}
+
+.thirty-one {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  min-width: 0;
+  box-sizing: border-box;
+  background-color: white;
+  box-shadow: 10px 22px 60px rgba(0, 0, 0, 0.103);
+  border: 2px solid transparent;
+  border-radius: 5px;
+  padding: 30px;
+}
+
+.thirty-one img {
+  display: block;
+  width: 62px;
+  height: 62px;
+  flex-shrink: 0;
+  object-fit: contain;
+}
+
+.thirty-one h2 {
+  margin: 0;
+  color: #2c1b9a;
+  font-size: 25px;
+}
+
+.thirty-one p {
+  margin: 0;
+  color: #2c1b9ac9;
+  font-size: 14px;
+}
+
+.thirty-two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 24px;
+  width: 100%;
+  max-width: 1000px;
+  margin-inline: auto;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.thirty-three {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+.thirty-three img {
+  display: block;
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  margin: 20px 20px 50px;
+  box-sizing: border-box;
+  object-fit: contain;
 }

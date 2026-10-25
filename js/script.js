@@ -362,23 +362,24 @@ document.querySelectorAll('[data-carousel]').forEach((carousel) => {
 
 
 
-const eighteen = document.querySelector(".eighteen");
-const box = document.querySelector(".fourteen");
-const plus = document.querySelector(".fifteen");
-const plusPlus = document.querySelector(".fifteen-plus");
 
-plus.addEventListener("click", () => {
-  box.classList.toggle("active");
-  eighteen.classList.toggle("eighteen-active");
-  plusPlus.classList.toggle("fifteen-plus-pro");
-  plus.classList.toggle("fifteen-hidden");
+document.querySelectorAll(".sixteen").forEach((section) => {
+  const box = section.querySelector(".fourteen");
+  const content = section.querySelector(".eighteen");
+  const plus = section.querySelector(".fifteen");
+  const minus = section.querySelector(".fifteen-plus");
+
+  function toggleSection() {
+    box.classList.toggle("active");
+    content.classList.toggle("eighteen-active");
+    minus.classList.toggle("fifteen-plus-pro");
+    plus.classList.toggle("fifteen-hidden");
+  }
+
+  plus.addEventListener("click", toggleSection);
+  minus.addEventListener("click", toggleSection);
 });
-plusPlus.addEventListener("click", () => {
-  box.classList.toggle("active");
-  eighteen.classList.toggle("eighteen-active");
-  plusPlus.classList.toggle("fifteen-plus-pro");
-  plus.classList.toggle("fifteen-hidden");
-});
+
 
 
 

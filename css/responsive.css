@@ -585,6 +585,16 @@ nav a.accent-link {
     .twenty {
         font-size: 22px;
     }
+
+    .thirty-two {
+        grid-template-columns: minmax(0, 1fr);
+        padding: 12px;
+    }
+
+    .thirty-one {
+        padding: 24px 20px;
+        justify-content: start;
+    }
 }
 
 
