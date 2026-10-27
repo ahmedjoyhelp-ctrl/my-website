@@ -664,6 +664,32 @@ nav a.accent-link {
         font-size:18px;
     }
 
+    .fourteen {
+        padding: 24px 16px;
+        gap: 12px;
+        min-height: 90px;
+    }
+
+    .fourteen h2 {
+        font-size: 16px;
+        white-space: normal;
+        overflow-wrap: break-word;
+        flex: 1;
+        min-width: 0;
+        margin: 0;
+    }
+
+    .fifteen,
+    .fifteen-plus-pro {
+        width: 36px;
+        height: 36px;
+        min-width: 36px;
+        flex-shrink: 0;
+        font-size: 24px;
+        padding: 0;
+        margin: 0;
+    }
+
 }
 
 
